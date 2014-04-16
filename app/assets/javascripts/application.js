@@ -14,4 +14,20 @@
 //= require jquery_ujs
 //= require foundation
 
-$(function(){ $(document).foundation(); });
+$(function(){ 
+  $(document).foundation(); 
+  
+  var mapOptions = { 
+    zoom: 14, 
+    center: new google.maps.LatLng(43.093336741, -75.194946527),
+    mapTypeControlOptions: {
+       mapTypeIds: []
+    },
+    mapTypeId: google.maps.MapTypeId.SATELLITE,
+    draggable: false,
+    zoomControl: true,
+    scrollwheel: false,
+    disableDoubleClickZoom: true
+  };
+  $scope.draw_map = new google.maps.Map(d3.select("#map").node(), mapOptions);
+});
