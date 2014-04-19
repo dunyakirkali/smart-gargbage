@@ -18,17 +18,36 @@
 $(function(){ 
   $(document).foundation(); 
   
-  var mapOptions = { 
-    zoom: 14, 
-    center: new google.maps.LatLng(43.093336741, -75.194946527),
-    mapTypeControlOptions: {
-       mapTypeIds: []
-    },
-    mapTypeId: google.maps.MapTypeId.SATELLITE,
-    draggable: false,
-    zoomControl: true,
-    scrollwheel: false,
-    disableDoubleClickZoom: true
-  };
-  new google.maps.Map(d3.select("#map_left").node(), mapOptions);
+  load_right_map();
+  load_left_map();
+  
 });
+
+function load_left_map() {
+  var chicago = new google.maps.LatLng(41.875696,-87.624207);
+  var mapOptions = {
+    zoom: 11,
+    center: chicago
+  }
+
+  var left_map = new google.maps.Map(d3.select("#map_left").node(), mapOptions);
+
+  var ctaLayer = new google.maps.KmlLayer({
+    url: 'http://gmaps-samples.googlecode.com/svn/trunk/ggeoxml/cta.kml'
+  });
+  ctaLayer.setMap(left_map);
+}
+
+function load_right_map() {
+  var mapOptions = { 
+    zoom: 15, 
+    center: new google.maps.LatLng(39.89139, 32.78472)
+  };
+  
+  var right_map = new google.maps.Map(d3.select("#map_right").node(), mapOptions);
+
+  var ctaLayer = new google.maps.KmlLayer({
+    url: "<%= asset_path('metu-campus-pick-up-sites.kml') %>"
+  });
+  ctaLayer.setMap(right_map);
+}

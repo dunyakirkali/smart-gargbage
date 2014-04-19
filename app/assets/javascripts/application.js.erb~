@@ -47,7 +47,7 @@ function load_right_map() {
   var right_map = new google.maps.Map(d3.select("#map_right").node(), mapOptions);
 
   var ctaLayer = new google.maps.KmlLayer({
-    url: "https://maps.google.com/maps/ms?authuser=0&vps=2&ie=UTF8&msa=0&output=kml&msid=216545768027274207201.0004f76932199a0f4378d"
+    url: "<%= asset_path('metu-campus-pick-up-sites.kml') %>"
   });
-  ctaLayer.setMap(right_map);
+  ctaLayer.setMap(right_mapp);
 }
