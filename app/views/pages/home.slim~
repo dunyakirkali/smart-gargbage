@@ -4,12 +4,25 @@
   h2 Controls
   .columns.small-12
     button Play
-.row#content
+.row
   h2 Viz
   .columns.small-6
-    h3 Fixed route
-    #map_left.map_canvas
+    .row
+      .columns.small-12
+        h3 Fixed route
+        #map_left.map_canvas
+    .row
+      .columns.small-12
+        h4 Stats
+        p Time: TODO
+        p Speed: TODO
   .columns.small-6
-    h3 Improved route
-    #map_right.map_canvas
-
+    .row
+      .columns.small-12
+        h3 Improved route
+        #map_right.map_canvas
+    .row
+      .columns.small-12
+        h4 Stats
+        p Time: TODO
+        p Speed: TODO
