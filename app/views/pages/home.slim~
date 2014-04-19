@@ -1,6 +1,4 @@
 .row
-  = render 'navigation'
-.row
   h2 Controls
   .columns.small-12
     button Play
