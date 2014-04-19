@@ -14,6 +14,9 @@
 //= require jquery_ujs
 //= require foundation
 //= require d3
+//= require angular
+//= require angular/app
+//= require angular/controllers/time_controller
 
 $(function(){ 
   $(document).foundation(); 

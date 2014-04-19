@@ -1,5 +1,5 @@
 doctype html
-html
+html ng-app='sgApp'
   head
     title SmartGarbage
     = stylesheet_link_tag    'application', media: 'all'
@@ -10,4 +10,5 @@ html
     meta name="viewport" content="width=device-width, initial-scale=1.0"
 
   body
+    = render 'navigation'
     = yield

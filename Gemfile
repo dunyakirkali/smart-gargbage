@@ -14,6 +14,8 @@ gem 'spring',        group: :development
 gem 'rails_12factor', group: :production
 gem 'slim-rails'
 gem 'foundation-rails'
+gem 'd3-rails'
+gem 'angularjs-rails'
 
 group :development, :test do
   gem 'rspec-rails', '~> 3.0.0.beta'
@@ -21,4 +23,3 @@ group :development, :test do
   gem 'therubyracer'
 end
 
-gem 'd3-rails'
