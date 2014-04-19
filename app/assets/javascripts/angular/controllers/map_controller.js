@@ -1,5 +1,5 @@
-sgApp.controller('MapController', ['$scope', '$element',
-function ($scope, $element) {
+sgApp.controller('MapController', ['$scope', '$element', 'map_overlay',
+function ($scope, $element, map_overlay) {
 
   $scope.path;
   $scope.containers;
@@ -14,11 +14,13 @@ function ($scope, $element) {
       styles: $scope.map_style()
     }
     $scope.map = new google.maps.Map($element.find(".map_canvas")[0], $scope.map_options);
+    $scope.overlay = new map_overlay($scope.map);
+    $scope.overlay.setMap($scope.map);
 
-    var ctaLayer = new google.maps.KmlLayer({
-      url: "https://maps.google.com/maps/ms?authuser=0&vps=2&ie=UTF8&msa=0&output=kml&msid=216545768027274207201.0004f76932199a0f4378d"
-    });
-    ctaLayer.setMap($scope.map);
+//    var ctaLayer = new google.maps.KmlLayer({
+//      url: "https://maps.google.com/maps/ms?authuser=0&vps=2&ie=UTF8&msa=0&output=kml&msid=216545768027274207201.0004f76932199a0f4378d"
+//    });
+//    ctaLayer.setMap($scope.map);
   }
 
 

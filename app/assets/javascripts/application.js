@@ -16,6 +16,7 @@
 //= require d3
 //= require angular
 //= require angular/app
+//= require angular/services/map_overlay
 //= require angular/controllers/time_controller
 //= require angular/controllers/map_controller
 

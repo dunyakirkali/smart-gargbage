@@ -14,19 +14,19 @@
     .row
       .columns.small-12
         h3 Fixed route
-        .map_canvas
+        #map_left.map_canvas
     .row
       .columns.small-12
         h4 Stats
         p
-          | Cost: {{ cost }}
+          | Cost: {{ cost }}₺
   .columns.small-12.medium-6.large-6 ng-controller='MapController'
     .row
       .columns.small-12
         h3 Improved route
-        .map_canvas
+        #map_right.map_canvas
     .row
       .columns.small-12
         h4 Stats
         p
-          | Cost: {{ cost }}
+          | Cost: {{ cost }}₺
