@@ -20,23 +20,5 @@
 //= require angular/controllers/map_controller
 
 $(function(){ 
-  $(document).foundation(); 
-  
-  load_right_map();
-  
+  $(document).foundation();
 });
-
-
-function load_right_map() {
-  var mapOptions = { 
-    zoom: 15, 
-    center: new google.maps.LatLng(39.89139, 32.78472)
-  };
-  
-  var right_map = new google.maps.Map(d3.select("#map_right").node(), mapOptions);
-
-  var ctaLayer = new google.maps.KmlLayer({
-    url: "https://maps.google.com/maps/ms?authuser=0&vps=2&ie=UTF8&msa=0&output=kml&msid=216545768027274207201.0004f76932199a0f4378d"
-  });
-  ctaLayer.setMap(right_map);
-}

@@ -1,22 +1,22 @@
-sgApp.controller('MapController', ['$scope',
-function ($scope) {
+sgApp.controller('MapController', ['$scope', '$element',
+function ($scope, $element) {
 
   $scope.path;
   $scope.containers;
+  $scope.cost = 0;
 
   $scope.init = function() {
-    $scope.center = new google.maps.LatLng(41.875696,-87.624207);
+    $scope.center = new google.maps.LatLng(39.89139, 32.78472)
     $scope.map_options = {
       zoom: 11,
       center: $scope.center,
       mapTypeId: google.maps.MapTypeId.ROADMAP,
       styles: $scope.map_style()
     }
-
-    $scope.map = new google.maps.Map(d3.select("#map_left").node(), $scope.map_options);
+    $scope.map = new google.maps.Map($element.find(".map_canvas")[0], $scope.map_options);
 
     var ctaLayer = new google.maps.KmlLayer({
-      url: 'http://gmaps-samples.googlecode.com/svn/trunk/ggeoxml/cta.kml'
+      url: "https://maps.google.com/maps/ms?authuser=0&vps=2&ie=UTF8&msa=0&output=kml&msid=216545768027274207201.0004f76932199a0f4378d"
     });
     ctaLayer.setMap($scope.map);
   }
