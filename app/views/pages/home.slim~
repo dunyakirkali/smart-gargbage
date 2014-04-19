@@ -1,0 +1,15 @@
+.row
+  = render 'navigation'
+.row
+  h2 Controls
+  .columns.small-12
+    button Play
+.row#content
+  h2 Viz
+  .columns.small-6
+    h3 Fixed route
+    #map_left.map_canvas
+  .columns.small-6
+    h3 Improved route
+    #map_right.map_canvas
+

@@ -1,12 +1,15 @@
 .row
-  .columns.smal-12
-    h2 Controls
+  = render 'navigation'
+.row
+  h2 Controls
+  .columns.small-12
     button Play
 .row
-  h1 Viz
+  h2 Viz
   .columns.small-6
-    h2 Fixed route
+    h3 Fixed route
     #map_left.map_canvas
   .columns.small-6
-    h2 Improved route
+    h3 Improved route
     #map_right.map_canvas
+

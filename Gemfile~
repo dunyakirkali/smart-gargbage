@@ -21,4 +21,3 @@ group :development, :test do
 end
 
 gem 'therubyracer'
-gem 'd3-rails'

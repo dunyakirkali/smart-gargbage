@@ -30,7 +30,5 @@ $(function(){
     scrollwheel: false,
     disableDoubleClickZoom: true
   };
-  
   new google.maps.Map(d3.select("#map_left").node(), mapOptions);
-  new google.maps.Map(d3.select("#map_right").node(), mapOptions);
 });
