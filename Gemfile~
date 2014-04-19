@@ -18,6 +18,7 @@ gem 'foundation-rails'
 group :development, :test do
   gem 'rspec-rails', '~> 3.0.0.beta'
   gem 'capybara'
+  gem 'therubyracer'
 end
 
-gem 'therubyracer'
+gem 'd3-rails'
