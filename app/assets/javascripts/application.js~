@@ -16,30 +16,15 @@
 //= require d3
 //= require angular
 //= require angular/app
-//= require angular/time_controller
+//= require angular/controllers/time_controller
 
 $(function(){ 
   $(document).foundation(); 
   
   load_right_map();
-  load_left_map();
   
 });
 
-function load_left_map() {
-  var chicago = new google.maps.LatLng(41.875696,-87.624207);
-  var mapOptions = {
-    zoom: 11,
-    center: chicago
-  }
-
-  var left_map = new google.maps.Map(d3.select("#map_left").node(), mapOptions);
-
-  var ctaLayer = new google.maps.KmlLayer({
-    url: 'http://gmaps-samples.googlecode.com/svn/trunk/ggeoxml/cta.kml'
-  });
-  ctaLayer.setMap(left_map);
-}
 
 function load_right_map() {
   var mapOptions = { 

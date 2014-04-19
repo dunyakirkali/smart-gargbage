@@ -2,6 +2,7 @@ sgApp.controller('TimeController', ['$scope',
 function ($scope) {
   $scope.speed = 50; // km/h
   $scope.state = 'paused';
+  $scope.speed_up = 1.0;
 
 
   $scope.play = function() {
@@ -23,8 +24,7 @@ function ($scope) {
   }
 
   $scope.tick = function() {
-    $scope.time = parseInt((new Date() - $scope.start_time) / 1000.0);
+    $scope.time = parseInt((new Date() - $scope.start_time) * $scope.speed_up / 1000.0);
     $scope.$apply();
   }
-
 }]);
