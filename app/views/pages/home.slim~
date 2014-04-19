@@ -1,7 +1,10 @@
-.row
+.row  ng-controller="TimeController"
   h2 Controls
   .columns.small-12
-    button Play
+    p
+      | Time: {{ time }}s
+    button ng-show="state == 'paused'" ng-click='play()' Play
+    button ng-show="state == 'playing'" ng-click='pause()' Pause
 .row
   h2 Viz
   .columns.small-12.medium-6.large-6
