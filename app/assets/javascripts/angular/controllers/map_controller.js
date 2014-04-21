@@ -17,13 +17,12 @@ function ($scope, $element, map_overlay) {
     $scope.overlay = new map_overlay($scope.map);
     $scope.overlay.setMap($scope.map);
 
-    google.maps.event.addListener($scope.map, 'idle', function() {
-      if(!$scope.timer) {
-        $scope.timer = setInterval(function() {
-          $scope.overlay.draw();
-        },30);
-      }
-    });
+    google.maps.event.addListener($scope.map, 'bounds_changed', $scope.redraw);
+
+  }
+
+  $scope.redraw = function() {
+    $scope.overlay.draw();
   }
 
 

@@ -28,19 +28,19 @@ map_overlay.prototype.draw = function() {
   // Update all circles
   var that = this;
   this.truck.attr({
-        transform: function () {
-          return "translate(" + [10, 10] + ")";
-        }
-      });
+    transform: function () {
+      return "translate(" + [10, 10] + ")";
+    }
+  });
 
   if(!this.containers) return;
   this.containers.selectAll(".container").attr({
-        transform: function (d) {
-          var latLon = new google.maps.LatLng(d.geometry.coordinates[1], d.geometry.coordinates[0]);
-	  var rr = overlayProjection.fromLatLngToContainerPixel(latLon);
-          return "translate(" + [rr.x, rr.y] + ")";
-        }
-      });
+    transform: function (d) {
+      var latLon = new google.maps.LatLng(d.geometry.coordinates[1], d.geometry.coordinates[0]);
+      var rr = overlayProjection.fromLatLngToContainerPixel(latLon);
+      return "translate(" + [rr.x, rr.y] + ")";
+    }
+  });
 }
 
 map_overlay.prototype.addTruck = function() {

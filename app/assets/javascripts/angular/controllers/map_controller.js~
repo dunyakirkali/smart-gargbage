@@ -17,20 +17,12 @@ function ($scope, $element, map_overlay) {
     $scope.overlay = new map_overlay($scope.map);
     $scope.overlay.setMap($scope.map);
 
-//    var ctaLayer = new google.maps.KmlLayer({
-//      url: "https://maps.google.com/maps/ms?authuser=0&vps=2&ie=UTF8&msa=0&output=kml&msid=216545768027274207201.0004f76932199a0f4378d"
-//    });
-//    ctaLayer.setMap($scope.map);
+    google.maps.event.addListener($scope.map, 'bounds_changed', $scope.redraw);
 
+  }
 
-
-    google.maps.event.addListener($scope.map, 'idle', function() {
-      if(!$scope.timer) {
-        $scope.timer = setInterval(function() {
-          $scope.overlay.draw();
-        },30);
-      }
-    });
+  $scope.redraw = function() {
+    $scope.overlay.draw();
   }
 
 
