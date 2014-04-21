@@ -33,6 +33,15 @@ map_overlay.prototype.draw = function() {
           return "translate(" + [10, 10] + ")";
         }
       });
+
+  if(!this.containers) return;
+  this.containers.selectAll(".container").attr({
+        transform: function (d) {
+          var latLon = new google.maps.LatLng(d.geometry.coordinates[1], d.geometry.coordinates[0]);
+	  var rr = overlayProjection.fromLatLngToContainerPixel(latLon);
+          return "translate(" + [rr.x, rr.y] + ")";
+        }
+      });
 }
 
 map_overlay.prototype.addTruck = function() {
@@ -40,12 +49,16 @@ map_overlay.prototype.addTruck = function() {
 }
 map_overlay.prototype.addContainers = function() {
   this.containers = this.svg.append("svg:g").attr("class", "containers");
-  this.containers.selectAll("circle")
+  this.containers.selectAll(".container")
         .data(this.containers_data)
         .enter().append("svg:circle")
 	.attr({ r: 10 })
-        .attr('fill', 'red')
-        .attr('opacity', 0.5);
+        .attr('opacity', function(d) { 
+          var myRegexp = /(\d+)/;
+          var match = myRegexp.exec(d.properties.description);
+          return parseFloat(match[1]) / 100.0;
+         })
+        .attr('class', 'container');
 }
 
 function map_overlay(map) {
