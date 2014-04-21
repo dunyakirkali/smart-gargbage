@@ -27,8 +27,7 @@ map_overlay.prototype.draw = function() {
 
   // Update all circles
   var that = this;
-  this.truck.transition()
-      .duration(30).attr({
+  this.truck.attr({
         transform: function () {
           return "translate(" + [10, 10] + ")";
         }

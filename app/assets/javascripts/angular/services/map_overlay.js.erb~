@@ -56,8 +56,7 @@ map_overlay.prototype.addContainers = function() {
         .attr('opacity', function(d) { 
           var myRegexp = /(\d+)/;
           var match = myRegexp.exec(d.properties.description);
-          var normalized = parseFloat(match[1]) / 100.0 / 4.0;
-          return normalized + 0.25;
+          return parseFloat(match[1]) / 100.0;
          })
         .attr('class', 'container');
 }
