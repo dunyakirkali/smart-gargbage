@@ -1,8 +1,9 @@
-@import "foundation_and_overrides";
+@import "foundation_and_overrides"
 html, 
 body
   height: 100%
 
+#viz_row
 .map_canvas
   height: 400px
 
