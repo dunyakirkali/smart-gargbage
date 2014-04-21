@@ -44,7 +44,7 @@ map_overlay.prototype.draw = function() {
 }
 
 map_overlay.prototype.addTruck = function() {
-  this.truck = this.svg.append("circle").attr('class', 'truck').attr({ r: 10 });
+  this.truck = this.svg.append("svg:g").append("circle").attr('class', 'truck').attr({ r: 10 });
 }
 map_overlay.prototype.addContainers = function() {
   this.containers = this.svg.append("svg:g").attr("class", "containers");
