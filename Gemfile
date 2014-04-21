@@ -17,6 +17,7 @@ gem 'foundation-rails'
 gem 'd3-rails'
 gem 'angularjs-rails'
 gem 'google-analytics-rails'
+gem 'jquery-ui-rails'
 
 group :development, :test do
   gem 'rspec-rails', '~> 3.0.0.beta'

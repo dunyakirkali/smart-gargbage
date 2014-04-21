@@ -11,11 +11,13 @@
 // about supported directives.
 //
 //= require jquery
+//= require jquery.ui.all
 //= require jquery_ujs
 //= require foundation
 //= require togeojson
 //= require d3
 //= require angular
+//= require slider
 //= require angular/app
 //= require angular/services/map_overlay
 //= require angular/controllers/time_controller

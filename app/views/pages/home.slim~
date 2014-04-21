@@ -1,13 +1,16 @@
 .row  ng-controller="TimeController"
   h2 Controls
-  .columns.small-12
+  .columns.small-4
     p
       | Time: {{ time }}s
     p
       | Speed: {{ speed }}km/h
-    input ng-model='speed_up'
+  .columns.small-4
+    p Speed multiplier
+    div ui-slider=true min="1.0" max="10.0" step='0.1' use-decimals=true ng-model="speed_up"
+  .columns.small-4
     button ng-show="state == 'paused'" ng-click='play()' Play
-    button ng-show="state == 'playing'" ng-click='pause()' Pause
+    button.alert ng-show="state == 'playing'" ng-click='pause()' Pause
 .row
   h2 Viz
   .columns.small-12.medium-6.large-6 ng-controller='MapController'
@@ -19,7 +22,9 @@
       .columns.small-12
         h4 Stats
         p
-          | Cost: {{ cost }}₺
+          | Cost: {{ cost | currency:'' }}₺
+        p
+          | Time: {{ time }}s.
   .columns.small-12.medium-6.large-6 ng-controller='MapController'
     .row
       .columns.small-12
@@ -30,3 +35,5 @@
         h4 Stats
         p
           | Cost: {{ cost }}₺
+        p
+          | Time: {{ time }}s.

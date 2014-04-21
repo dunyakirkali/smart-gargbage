@@ -1,5 +1,5 @@
-sgApp.controller('TimeController', ['$scope',
-function ($scope) {
+sgApp.controller('TimeController', ['$scope', '$rootScope', 'vr.directives.slider',
+function ($scope, $rootScope, vr.directives.slider) {
   $scope.speed = 50; // km/h
   $scope.state = 'paused';
   $scope.speed_up = 1.0;
@@ -26,6 +26,6 @@ function ($scope) {
   $scope.tick = function() {
     $scope.time = parseInt((new Date() - $scope.start_time) * $scope.speed_up / 1000.0);
     $scope.$apply();
+    $rootScope.$broadcast('tick', $scope.time);
   }
-
 }]);

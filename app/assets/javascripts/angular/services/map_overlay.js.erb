@@ -60,9 +60,13 @@ map_overlay.prototype.addContainers = function() {
         .attr('class', 'container');
 }
 
+map_overlay.prototype.setTime = function(time) {
+  this.time = time;
+}
+
 function map_overlay(map) {
   this.gmap = map;
-
+  this.time = 0;
 }
 
 sgApp.factory('map_overlay', function ($rootScope) {

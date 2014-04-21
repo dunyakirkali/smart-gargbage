@@ -1,1 +1,1 @@
-var sgApp = angular.module('sgApp', []);
+var sgApp = angular.module('sgApp', ['vr.directives.slider']);

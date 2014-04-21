@@ -1,0 +1,4 @@
+
+sgApp.factory('time_sync', function ($rootScope) {
+  return self;
+});

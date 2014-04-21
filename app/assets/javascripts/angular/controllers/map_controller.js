@@ -1,11 +1,14 @@
-sgApp.controller('MapController', ['$scope', '$element', 'map_overlay',
-function ($scope, $element, map_overlay) {
+sgApp.controller('MapController', ['$scope', '$rootScope', '$element', 'map_overlay',
+function ($scope, $rootScope, $element, map_overlay) {
 
   $scope.path;
   $scope.containers;
   $scope.cost = 0;
+  $scope.complete = false;
 
   $scope.init = function() {
+    $scope.complete = (Math.random() > 0.5);
+
     $scope.center = new google.maps.LatLng(39.89139, 32.78472)
     $scope.map_options = {
       zoom: 11,
@@ -18,6 +21,15 @@ function ($scope, $element, map_overlay) {
     $scope.overlay.setMap($scope.map);
 
     google.maps.event.addListener($scope.map, 'bounds_changed', $scope.redraw);
+
+    $rootScope.$on('tick', function (event, data) {
+      if(!$scope.complete) {
+        $scope.time = data;
+        $scope.cost = $scope.time * 0.134;
+        $scope.$apply();
+        $scope.overlay.setTime(data);
+      }
+    });
 
   }
 
