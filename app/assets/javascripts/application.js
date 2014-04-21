@@ -13,6 +13,7 @@
 //= require jquery
 //= require jquery_ujs
 //= require foundation
+//= require togeojson
 //= require d3
 //= require angular
 //= require angular/app

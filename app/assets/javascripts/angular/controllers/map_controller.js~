@@ -15,12 +15,28 @@ function ($scope, $element, map_overlay) {
     }
     $scope.map = new google.maps.Map($element.find(".map_canvas")[0], $scope.map_options);
     $scope.overlay = new map_overlay($scope.map);
-//    $scope.overlay.setMap($scope.map);
+    $scope.overlay.setMap($scope.map);
 
-//    var ctaLayer = new google.maps.KmlLayer({
-//      url: "https://maps.google.com/maps/ms?authuser=0&vps=2&ie=UTF8&msa=0&output=kml&msid=216545768027274207201.0004f76932199a0f4378d"
-//    });
-//    ctaLayer.setMap($scope.map);
+    var ctaLayer = new google.maps.KmlLayer({
+      url: "https://maps.google.com/maps/ms?authuser=0&vps=2&ie=UTF8&msa=0&output=kml&msid=216545768027274207201.0004f76932199a0f4378d"
+    });
+    ctaLayer.setMap($scope.map);
+
+    google.maps.Map.prototype.getMapScale = function () {
+        var circumference = 40075040, zoom, lat, scale;
+        zoom = this.getZoom();
+        lat = this.getCenter().lat();
+        scale = (circumference * Math.cos(lat) / Math.pow(2, zoom + 8));
+        return scale;
+    }
+
+    google.maps.event.addListener($scope.map, 'idle', function() {
+      if(!$scope.timer) {
+        $scope.timer = setInterval(function() {
+          $scope.overlay.draw();
+        },30);
+      }
+    });
   }
 
 

@@ -1,13 +1,16 @@
 map_overlay.prototype = new google.maps.OverlayView();
 map_overlay.prototype.onAdd = function() {
+  var that = this;
   this.div = d3.select(this.getPanes().overlayLayer).append("div").attr("class", "d3map");
   this.svg = this.div.append('svg:svg');
   this.addTruck();
 
-  $.ajax('http://maps.google.com/maps/ms?authuser=0&vps=2&ie=UTF8&msa=0&output=kml&msid=216545768027274207201.0004f76932199a0f4378d').done(function(xml) {
-    console.log(toGeoJSON.kml(xml));
+  $.ajax("<%= asset_path 'metu-campus-pick-up-sites.kml'%>").done(function(xml) {
+    var kml_as_json = toGeoJSON.kml(xml);
+    that.containers_data = kml_as_json.features;
+    that.addContainers();
+    that.draw();
   });
-  this.addContainers();
 }
 map_overlay.prototype.onRemove = function() {}
 map_overlay.prototype.draw = function() {
@@ -17,20 +20,32 @@ map_overlay.prototype.draw = function() {
   var overlayProjection = this.getProjection();
   var swc = overlayProjection.fromLatLngToDivPixel(sw);
   var nec = overlayProjection.fromLatLngToDivPixel(ne);
-  
-  $(this.div).css('left', swc.x + 'px');
-  $(this.div).css('top', nec.y + 'px');
-  $(this.div).css('width', (nec.x - swc.x) + 'px');
-  $(this.div).css('height', (swc.y - nec.y) + 'px');
+  $(this.div[0]).css('left', swc.x + 'px');
+  $(this.div[0]).css('top', nec.y + 'px');
+  $(this.div[0]).css('width', (nec.x - swc.x) + 'px');
+  $(this.div[0]).css('height', (swc.y - nec.y) + 'px');
+
+  // Update all circles
+  var that = this;
+  this.truck.transition()
+      .duration(30).attr({
+        transform: function () {
+          return "translate(" + [10, 10] + ")";
+        }
+      });
 }
 
 map_overlay.prototype.addTruck = function() {
-  this.truck = this.svg.append("svg:g").attr("class", "truck");
-  this.truck.append("circle").attr({ r: 10 }).attr('fill', 'green').attr('opacity', 1.0);
+  this.truck = this.svg.append("circle").attr('class', 'truck').attr({ r: 10 });
 }
 map_overlay.prototype.addContainers = function() {
   this.containers = this.svg.append("svg:g").attr("class", "containers");
-  this.containers.append("circle").attr({ r: 10 }).attr('fill', 'red').attr('opacity', 0.5);
+  this.containers.selectAll("circle")
+        .data(this.containers_data)
+        .enter().append("svg:circle")
+	.attr({ r: 10 })
+        .attr('fill', 'red')
+        .attr('opacity', 0.5);
 }
 
 function map_overlay(map) {

@@ -7,7 +7,7 @@
       | Speed: {{ speed }}km/h
     input ng-model='speed_up'
     button ng-show="state == 'paused'" ng-click='play()' Play
-    button ng-show="state == 'playing'" ng-click='pause()' Pause
+    button.alert ng-show="state == 'playing'" ng-click='pause()' Pause
 .row
   h2 Viz
   .columns.small-12.medium-6.large-6 ng-controller='MapController'
