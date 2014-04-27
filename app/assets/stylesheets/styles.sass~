@@ -4,6 +4,7 @@ body
   height: 100%
 
 #viz_row
+
 .map_canvas
   height: 400px
 
@@ -23,4 +24,7 @@ body
       opacity: 1.0
     .container
       fill: $alert-color
+    .path
+      stroke: red
+      fill:none
       
