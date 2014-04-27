@@ -1,13 +1,13 @@
 .row ng-controller="TimeController"
   .columns.small-4
     h3 Zaman hızlandırıcı
-    div ui-slider=true min="1.0" max="20.0" step='0.1' use-decimals=true ng-model="speed_up"
+    div ui-slider=true min="1.0" max="100.0" step='0.1' use-decimals=true ng-model="speed_up"
     .row
       .columns.small-6
         p
           | Geçen zaman:
           br
-          | {{ time }}s
+          | {{ time | number:0 }}s
       .columns.small-6
         p
           | Kamyon Hızı: 
@@ -31,7 +31,7 @@
             | {{ cost | currency:'' }}₺
           | Time: 
           span.label
-            | {{ time }}s.
+            | {{ time | number:0 }}s
     .row
       .columns.small-12
         .map_canvas
@@ -45,7 +45,7 @@
             | {{ cost | currency:'' }}₺
           | Time: 
           span.label
-            | {{ time }}s.
+            | {{ time | number:0 }}s
     .row
       .columns.small-12
         .map_canvas

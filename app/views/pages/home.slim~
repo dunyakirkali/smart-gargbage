@@ -7,10 +7,12 @@
         p
           | Geçen zaman:
           br
-          | {{ time }}s
+          | {{ time | number:0 }}s
       .columns.small-6
         p
-          | Kamyon Hızı: {{ speed }}km/h
+          | Kamyon Hızı: 
+          br
+          | {{ speed }}km/h
   .columns.small-2
     button.button ng-show="state == 'paused'" ng-click='play()' Play
     button.alert.button ng-show="state == 'playing'" ng-click='pause()' Pause
@@ -29,7 +31,7 @@
             | {{ cost | currency:'' }}₺
           | Time: 
           span.label
-            | {{ time }}s.
+            | {{ time | number:0 }}s
     .row
       .columns.small-12
         .map_canvas
@@ -43,7 +45,7 @@
             | {{ cost | currency:'' }}₺
           | Time: 
           span.label
-            | {{ time }}s.
+            | {{ time | number:0 }}s
     .row
       .columns.small-12
         .map_canvas

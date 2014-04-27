@@ -46,7 +46,7 @@ function ($scope, $rootScope, $element, map_overlay) {
         if($scope.cost > $scope.price_limit) {
           $scope.alert_state = 'alert';
         }
-  	if (this.time < 48) {
+  	if (this.time > 37) {
           this.complete = true;
         }
         $scope.$apply();

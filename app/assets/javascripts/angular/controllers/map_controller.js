@@ -8,6 +8,7 @@ function ($scope, $rootScope, $element, map_overlay) {
   $scope.alert_state = '';
   $scope.price_limit = 37;
   $scope.cost_per_second = 0.134;
+  $scope.time = 0;
 
   $scope.init = function() {
     $scope.complete = false;

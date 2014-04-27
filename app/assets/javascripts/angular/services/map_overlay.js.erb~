@@ -1,6 +1,7 @@
 map_overlay.prototype = new google.maps.OverlayView();
 map_overlay.prototype.onAdd = function() {
   var that = this;
+  var path_kml = this.element.data('kml');
   this.div = d3.select(this.getPanes().overlayLayer).append("div").attr("class", "d3map");
   this.svg = this.div.append('svg:svg');
 
@@ -9,19 +10,20 @@ map_overlay.prototype.onAdd = function() {
     that.containers_data = kml_as_json.features;
     that.addContainers();
     that.draw();
+  });
 
-    var path_kml = that.element.data('kml');
-    $.ajax(path_kml).done(function(xml) {
-      var kml_as_json = toGeoJSON.kml(xml);
-      that.path_data = kml_as_json.features;
-      that.addPath();
-      that.draw();
-    });
+  $.ajax(path_kml).done(function(xml) {
+    var kml_as_json = toGeoJSON.kml(xml);
+    that.path_data = kml_as_json.features;
+    that.addPath();
+    that.draw();
   });
 
   this.addTruck();
 }
+
 map_overlay.prototype.onRemove = function() {}
+
 map_overlay.prototype.draw = function() {
   var bounds = this.gmap.getBounds();
   var ne = bounds.getNorthEast(),
@@ -71,7 +73,7 @@ map_overlay.prototype.addPath = function() {
   }
   var path = d3.geo.path().projection(googleMapProjection);
 
-  path_element.selectAll("path").data(this.path_data).enter().append("svg:path").attr("d", path).attr('class', 'path');
+  path_element.selectAll("path").data(this.path_data).enter().append("svg:path").attr("d", path).attr('class', 'path').attr('z-index', 0);
 }
 
 map_overlay.prototype.addTruck = function() {
@@ -86,7 +88,11 @@ map_overlay.prototype.addContainers = function() {
         .attr('opacity', function(d) { 
           var myRegexp = /(\d+)/;
           var match = myRegexp.exec(d.properties.description);
-          return parseFloat(match[1]) / 100.0;
+          if(match[1] == 100) {
+            return 1.0;
+          } else {
+            return parseFloat(match[1]) / 100.0 * 0.6;
+          }
          })
         .attr('class', 'container');
 }
