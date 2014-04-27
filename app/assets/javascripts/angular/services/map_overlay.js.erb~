@@ -11,7 +11,7 @@ map_overlay.prototype.onAdd = function() {
     that.addContainers();
     that.draw();
 
-    var path_kml = this.element.data('kml');
+    var path_kml = that.element.data('kml');
     $.ajax(path_kml).done(function(xml) {
       var kml_as_json = toGeoJSON.kml(xml);
       that.path_data = kml_as_json.features;
