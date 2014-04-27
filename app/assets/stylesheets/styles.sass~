@@ -25,6 +25,7 @@ body
     .container
       fill: $alert-color
     .path
+      stroke-width: 20
       stroke: red
-      fill:none
+      fill: transparent
       
