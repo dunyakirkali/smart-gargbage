@@ -4,18 +4,16 @@
 		<name>metu campus pick-up sites</name>
 		<Placemark>
 			<styleUrl>#icon-503-F4B400</styleUrl>
-			<name>Dorm's 1
-</name>
-			<description><![CDATA[90%]]></description>
+			<name>Dorm's 1</name>
+			<description><![CDATA[65%]]></description>
 			<Point>
 				<coordinates>32.78862118721008,39.89012224398176,0.0</coordinates>
 			</Point>
 		</Placemark>
 		<Placemark>
 			<styleUrl>#icon-503-F4B400</styleUrl>
-			<name>Dorm's 2
-</name>
-			<description><![CDATA[80%]]></description>
+			<name>Dorm's 2</name>
+			<description><![CDATA[58%]]></description>
 			<Point>
 				<coordinates>32.79077768325806,39.889471914834346,0.0</coordinates>
 			</Point>
@@ -23,16 +21,15 @@
 		<Placemark>
 			<styleUrl>#icon-503-F4B400</styleUrl>
 			<name>Dorm's 3</name>
-			<description><![CDATA[100% (alert?)]]></description>
+			<description><![CDATA[73%]]></description>
 			<Point>
 				<coordinates>32.788288593292236,39.88924964902755,0.0</coordinates>
 			</Point>
 		</Placemark>
 		<Placemark>
 			<styleUrl>#icon-503-F4B400</styleUrl>
-			<name>Housing 1
-</name>
-			<description><![CDATA[60%]]></description>
+			<name>Housing 1</name>
+			<description><![CDATA[%48]]></description>
 			<Point>
 				<coordinates>32.79026806354523,39.89107714648586,0.0</coordinates>
 			</Point>
@@ -48,54 +45,48 @@
 		</Placemark>
 		<Placemark>
 			<styleUrl>#icon-503-FF8277</styleUrl>
-			<name>Public 2
-</name>
-			<description><![CDATA[25%]]></description>
+			<name>Public 2</name>
+			<description><![CDATA[12%]]></description>
 			<Point>
 				<coordinates>32.786314487457275,39.89465791240229,0.0</coordinates>
 			</Point>
 		</Placemark>
 		<Placemark>
 			<styleUrl>#icon-503-F4B400</styleUrl>
-			<name>Dorm's 4
-</name>
-			<description><![CDATA[75%]]></description>
+			<name>Dorm's 4</name>
+			<description><![CDATA[49%]]></description>
 			<Point>
 				<coordinates>32.77739882469177,39.885141717900204,0.0</coordinates>
 			</Point>
 		</Placemark>
 		<Placemark>
 			<styleUrl>#icon-503-F4B400</styleUrl>
-			<name>Dorm's 5
-</name>
-			<description><![CDATA[60%]]></description>
+			<name>Dorm's 5</name>
+			<description><![CDATA[65%]]></description>
 			<Point>
 				<coordinates>32.77671217918396,39.88770200046808,0.0</coordinates>
 			</Point>
 		</Placemark>
 		<Placemark>
 			<styleUrl>#icon-503-F4B400</styleUrl>
-			<name>Housing 2
-</name>
-			<description><![CDATA[55%]]></description>
+			<name>Housing 2</name>
+			<description><![CDATA[41%]]></description>
 			<Point>
 				<coordinates>32.7757465839386,39.889537771231296,0.0</coordinates>
 			</Point>
 		</Placemark>
 		<Placemark>
 			<styleUrl>#icon-503-F4B400</styleUrl>
-			<name>Housing 3
-</name>
-			<description><![CDATA[25%]]></description>
+			<name>Housing 3</name>
+			<description><![CDATA[28%]]></description>
 			<Point>
 				<coordinates>32.772860527038574,39.891143001340645,0.0</coordinates>
 			</Point>
 		</Placemark>
 		<Placemark>
 			<styleUrl>#icon-503-F4B400</styleUrl>
-			<name>Housing 4
-</name>
-			<description><![CDATA[10%]]></description>
+			<name>Housing 4</name>
+			<description><![CDATA[13%]]></description>
 			<Point>
 				<coordinates>32.76867091655731,39.88767318753064,0.0</coordinates>
 			</Point>
@@ -103,7 +94,7 @@
 		<Placemark>
 			<styleUrl>#icon-503-FF8277</styleUrl>
 			<name>Presidency</name>
-			<description><![CDATA[60%]]></description>
+			<description><![CDATA[38%]]></description>
 			<Point>
 				<coordinates>32.78440475463867,39.89456736660404,0.0</coordinates>
 			</Point>
@@ -111,16 +102,15 @@
 		<Placemark>
 			<styleUrl>#icon-503-FF8277</styleUrl>
 			<name>Main Library</name>
-			<description><![CDATA[50%]]></description>
+			<description><![CDATA[44%]]></description>
 			<Point>
 				<coordinates>32.783321142196655,39.896509959300786,0.0</coordinates>
 			</Point>
 		</Placemark>
 		<Placemark>
 			<styleUrl>#icon-503-FF8277</styleUrl>
-			<name>Comp. Center
-</name>
-			<description><![CDATA[60%]]></description>
+			<name>Comp. Center</name>
+			<description><![CDATA[14%]]></description>
 			<Point>
 				<coordinates>32.78346598148346,39.891583404055645,0.0</coordinates>
 			</Point>
@@ -128,16 +118,15 @@
 		<Placemark>
 			<styleUrl>#icon-503-3F5BA9</styleUrl>
 			<name>Museum &amp; Foreign Lang. Dept.</name>
-			<description><![CDATA[30%]]></description>
+			<description><![CDATA[38%]]></description>
 			<Point>
 				<coordinates>32.77294635772705,39.901753038431934,0.0</coordinates>
 			</Point>
 		</Placemark>
 		<Placemark>
 			<styleUrl>#icon-503-3F5BA9</styleUrl>
-			<name>METU High School
-</name>
-			<description><![CDATA[35%]]></description>
+			<name>METU High School</name>
+			<description><![CDATA[67%]]></description>
 			<Point>
 				<coordinates>32.76942729949951,39.901958802587394,0.0</coordinates>
 			</Point>
@@ -145,7 +134,7 @@
 		<Placemark>
 			<styleUrl>#icon-503-FF8277</styleUrl>
 			<name>Maintenance</name>
-			<description><![CDATA[65%]]></description>
+			<description><![CDATA[45%]]></description>
 			<Point>
 				<coordinates>32.76993155479431,39.90502050021694,0.0</coordinates>
 			</Point>
@@ -153,7 +142,7 @@
 		<Placemark>
 			<styleUrl>#icon-503-3F5BA9</styleUrl>
 			<name>Fac. Education</name>
-			<description><![CDATA[35%]]></description>
+			<description><![CDATA[18%]]></description>
 			<Point>
 				<coordinates>32.77689456939697,39.89999167197871,0.0</coordinates>
 			</Point>
@@ -161,7 +150,7 @@
 		<Placemark>
 			<styleUrl>#icon-503-3F5BA9</styleUrl>
 			<name>Dept. Administration</name>
-			<description><![CDATA[55%]]></description>
+			<description><![CDATA[52%]]></description>
 			<Point>
 				<coordinates>32.77839660644531,39.898073871039195,0.0</coordinates>
 			</Point>
@@ -169,25 +158,23 @@
 		<Placemark>
 			<styleUrl>#icon-503-3F5BA9</styleUrl>
 			<name>Basic English 2</name>
-			<description><![CDATA[25%]]></description>
+			<description><![CDATA[63%]]></description>
 			<Point>
 				<coordinates>32.779104709625244,39.90003282591706,0.0</coordinates>
 			</Point>
 		</Placemark>
 		<Placemark>
 			<styleUrl>#icon-503-3F5BA9</styleUrl>
-			<name>Basic English 1
-</name>
-			<description><![CDATA[50%]]></description>
+			<name>Basic English 1</name>
+			<description><![CDATA[52%]]></description>
 			<Point>
 				<coordinates>32.78143286705017,39.90035382578808,0.0</coordinates>
 			</Point>
 		</Placemark>
 		<Placemark>
 			<styleUrl>#icon-503-3F5BA9</styleUrl>
-			<name>Dept. Econ.
-</name>
-			<description><![CDATA[45%]]></description>
+			<name>Dept. Econ.</name>
+			<description><![CDATA[62%]]></description>
 			<Point>
 				<coordinates>32.78244137763977,39.898822889810816,0.0</coordinates>
 			</Point>
@@ -195,52 +182,47 @@
 		<Placemark>
 			<styleUrl>#icon-503-3F5BA9</styleUrl>
 			<name>Dept. Arch.</name>
-			<description><![CDATA[60%]]></description>
+			<description><![CDATA[55%]]></description>
 			<Point>
 				<coordinates>32.781111001968384,39.89758000803005,0.0</coordinates>
 			</Point>
 		</Placemark>
 		<Placemark>
 			<styleUrl>#icon-503-3F5BA9</styleUrl>
-			<name>Dept. Hum. Sci.
-</name>
-			<description><![CDATA[40%]]></description>
+			<name>Dept. Hum. Sci.</name>
+			<description><![CDATA[38%]]></description>
 			<Point>
 				<coordinates>32.781325578689575,39.89627948507999,0.0</coordinates>
 			</Point>
 		</Placemark>
 		<Placemark>
 			<styleUrl>#icon-503-3F5BA9</styleUrl>
-			<name>Dept. Biology
-</name>
-			<description><![CDATA[35%]]></description>
+			<name>Dept. Biology</name>
+			<description><![CDATA[38%]]></description>
 			<Point>
 				<coordinates>32.77976453304291,39.89618071017666,0.0</coordinates>
 			</Point>
 		</Placemark>
 		<Placemark>
 			<styleUrl>#icon-503-3F5BA9</styleUrl>
-			<name>Dept. Physics
-</name>
-			<description><![CDATA[80%]]></description>
+			<name>Dept. Physics</name>
+			<description><![CDATA[100%]]></description>
 			<Point>
 				<coordinates>32.78150796890259,39.894674375261836,0.0</coordinates>
 			</Point>
 		</Placemark>
 		<Placemark>
 			<styleUrl>#icon-503-3F5BA9</styleUrl>
-			<name>Dept. Stat.
-</name>
-			<description><![CDATA[40%]]></description>
+			<name>Dept. Stat.</name>
+			<description><![CDATA[0%]]></description>
 			<Point>
 				<coordinates>32.78176546096802,39.89324620748742,0.0</coordinates>
 			</Point>
 		</Placemark>
 		<Placemark>
 			<styleUrl>#icon-503-3F5BA9</styleUrl>
-			<name>Dept. Ind. Eng.
-</name>
-			<description><![CDATA[60%]]></description>
+			<name>Dept. Ind. Eng.</name>
+			<description><![CDATA[0%]]></description>
 			<Point>
 				<coordinates>32.781556248664856,39.892307798628224,0.0</coordinates>
 			</Point>
@@ -248,16 +230,15 @@
 		<Placemark>
 			<styleUrl>#icon-503-FF8277</styleUrl>
 			<name>Cafeteria</name>
-			<description><![CDATA[95%]]></description>
+			<description><![CDATA[100%]]></description>
 			<Point>
 				<coordinates>32.78424382209778,39.893542544457986,0.0</coordinates>
 			</Point>
 		</Placemark>
 		<Placemark>
 			<styleUrl>#icon-503-3F5BA9</styleUrl>
-			<name>Dept. Civil Eng.
-</name>
-			<description><![CDATA[90%]]></description>
+			<name>Dept. Civil Eng.</name>
+			<description><![CDATA[58%]]></description>
 			<Point>
 				<coordinates>32.78399705886841,39.890472102046694,0.0</coordinates>
 			</Point>
@@ -265,115 +246,103 @@
 		<Placemark>
 			<styleUrl>#icon-503-3F5BA9</styleUrl>
 			<name>Dept. EE Eng.1</name>
-			<description><![CDATA[75%]]></description>
+			<description><![CDATA[0%]]></description>
 			<Point>
 				<coordinates>32.78190493583679,39.89134056552536,0.0</coordinates>
 			</Point>
 		</Placemark>
 		<Placemark>
 			<styleUrl>#icon-503-3F5BA9</styleUrl>
-			<name>Dept. Mech Eng.
-</name>
-			<description><![CDATA[65%]]></description>
+			<name>Dept. Mech Eng.</name>
+			<description><![CDATA[66%]]></description>
 			<Point>
 				<coordinates>32.782355546951294,39.88878041884658,0.0</coordinates>
 			</Point>
 		</Placemark>
 		<Placemark>
 			<styleUrl>#icon-503-3F5BA9</styleUrl>
-			<name>Dept. EE Eng. 2
-</name>
-			<description><![CDATA[35%]]></description>
+			<name>Dept. EE Eng. 2</name>
+			<description><![CDATA[44%]]></description>
 			<Point>
 				<coordinates>32.779850363731384,39.88957893144727,0.0</coordinates>
 			</Point>
 		</Placemark>
 		<Placemark>
 			<styleUrl>#icon-503-3F5BA9</styleUrl>
-			<name>Dept. Chem. Eng.
-</name>
-			<description><![CDATA[65%]]></description>
+			<name>Dept. Chem. Eng.</name>
+			<description><![CDATA[34%]]></description>
 			<Point>
 				<coordinates>32.78322994709015,39.88792838741239,0.0</coordinates>
 			</Point>
 		</Placemark>
 		<Placemark>
 			<styleUrl>#icon-503-3F5BA9</styleUrl>
-			<name>Dept. Env. Eng.
-</name>
-			<description><![CDATA[55%]]></description>
+			<name>Dept. Env. Eng.</name>
+			<description><![CDATA[40%]]></description>
 			<Point>
 				<coordinates>32.78342306613922,39.886611216530476,0.0</coordinates>
 			</Point>
 		</Placemark>
 		<Placemark>
 			<styleUrl>#icon-503-3F5BA9</styleUrl>
-			<name>Dept. Mining. Eng.
-</name>
-			<description><![CDATA[50%]]></description>
+			<name>Dept. Mining. Eng.</name>
+			<description><![CDATA[33%]]></description>
 			<Point>
 				<coordinates>32.78099298477173,39.88587852927379,0.0</coordinates>
 			</Point>
 		</Placemark>
 		<Placemark>
 			<styleUrl>#icon-503-3F5BA9</styleUrl>
-			<name>Dept. Aeros. Eng.
-</name>
-			<description><![CDATA[45%]]></description>
+			<name>Dept. Aeros. Eng.</name>
+			<description><![CDATA[27%]]></description>
 			<Point>
 				<coordinates>32.778836488723755,39.88518288075561,0.0</coordinates>
 			</Point>
 		</Placemark>
 		<Placemark>
 			<styleUrl>#icon-503-009D57</styleUrl>
-			<name>Technopolis 1
-</name>
-			<description><![CDATA[40%]]></description>
+			<name>Technopolis 1</name>
+			<description><![CDATA[49%]]></description>
 			<Point>
 				<coordinates>32.77376174926758,39.899399052525744,0.0</coordinates>
 			</Point>
 		</Placemark>
 		<Placemark>
 			<styleUrl>#icon-503-009D57</styleUrl>
-			<name>Technopolis 2
-</name>
-			<description><![CDATA[55%]]></description>
+			<name>Technopolis 2</name>
+			<description><![CDATA[33%]]></description>
 			<Point>
 				<coordinates>32.775864601135254,39.89842780400649,0.0</coordinates>
 			</Point>
 		</Placemark>
 		<Placemark>
 			<styleUrl>#icon-503-009D57</styleUrl>
-			<name>Technopolis 3
-</name>
-			<description><![CDATA[35%]]></description>
+			<name>Technopolis 3</name>
+			<description><![CDATA[43%]]></description>
 			<Point>
 				<coordinates>32.77097225189209,39.898230260250166,0.0</coordinates>
 			</Point>
 		</Placemark>
 		<Placemark>
 			<styleUrl>#icon-503-009D57</styleUrl>
-			<name>Technopolis 4
-</name>
-			<description><![CDATA[65%]]></description>
+			<name>Technopolis 4</name>
+			<description><![CDATA[28%]]></description>
 			<Point>
 				<coordinates>32.77419090270996,39.89681451333232,0.0</coordinates>
 			</Point>
 		</Placemark>
 		<Placemark>
 			<styleUrl>#icon-503-009D57</styleUrl>
-			<name>Technopolis 5
-</name>
-			<description><![CDATA[25%]]></description>
+			<name>Technopolis 5</name>
+			<description><![CDATA[0%]]></description>
 			<Point>
 				<coordinates>32.771852016448975,39.893489039266434,0.0</coordinates>
 			</Point>
 		</Placemark>
 		<Placemark>
 			<styleUrl>#icon-503-FF8277</styleUrl>
-			<name>Informatics Ins.
-</name>
-			<description><![CDATA[40%]]></description>
+			<name>Informatics Ins.</name>
+			<description><![CDATA[0%]]></description>
 			<Point>
 				<coordinates>32.77766704559326,39.89238599985718,0.0</coordinates>
 			</Point>
