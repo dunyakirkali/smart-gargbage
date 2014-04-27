@@ -12,7 +12,7 @@ function ($scope, $rootScope, $element, map_overlay) {
   $scope.init = function() {
     $scope.complete = false;
 
-    $scope.center = new google.maps.LatLng(39.89139, 32.78472)
+    $scope.center = new google.maps.LatLng(39.896180710,32.779764533)
     $scope.map_options = {
       zoom: 14,
       center: $scope.center,

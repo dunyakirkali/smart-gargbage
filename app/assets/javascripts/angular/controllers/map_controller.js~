@@ -14,7 +14,7 @@ function ($scope, $rootScope, $element, map_overlay) {
 
     $scope.center = new google.maps.LatLng(39.89139, 32.78472)
     $scope.map_options = {
-      zoom: 11,
+      zoom: 14,
       center: $scope.center,
       mapTypeId: google.maps.MapTypeId.ROADMAP,
       styles: $scope.map_style(),

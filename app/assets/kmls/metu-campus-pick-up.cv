@@ -1,0 +1,44 @@
+type,latitude,longitude,sym,color,scale,name,desc
+W,39.890122244,32.788621187,http://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png,#F4B400,1.1,Dorm's 1,90%
+W,39.889471915,32.790777683,http://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png,#F4B400,1.1,Dorm's 2,80%
+W,39.889249649,32.788288593,http://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png,#F4B400,1.1,Dorm's 3,100% (alert?)
+W,39.891077146,32.790268064,http://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png,#F4B400,1.1,Housing 1,60%
+W,39.892324262,32.789189816,http://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png,#FF8277,1.1,Public 1,100%
+W,39.894657912,32.786314487,http://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png,#FF8277,1.1,Public 2,25%
+W,39.885141718,32.777398825,http://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png,#F4B400,1.1,Dorm's 4,75%
+W,39.887702000,32.776712179,http://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png,#F4B400,1.1,Dorm's 5,60%
+W,39.889537771,32.775746584,http://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png,#F4B400,1.1,Housing 2,55%
+W,39.891143001,32.772860527,http://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png,#F4B400,1.1,Housing 3,25%
+W,39.887673188,32.768670917,http://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png,#F4B400,1.1,Housing 4,10%
+W,39.894567367,32.784404755,http://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png,#FF8277,1.1,Presidency,60%
+W,39.896509959,32.783321142,http://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png,#FF8277,1.1,Main Library,50%
+W,39.891583404,32.783465981,http://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png,#FF8277,1.1,Comp. Center,60%
+W,39.901753038,32.772946358,http://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png,#3F5BA9,1.1,Museum & Foreign Lang. Dept.,30%
+W,39.901958803,32.769427299,http://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png,#3F5BA9,1.1,METU High School,35%
+W,39.905020500,32.769931555,http://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png,#FF8277,1.1,Maintenance,65%
+W,39.899991672,32.776894569,http://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png,#3F5BA9,1.1,Fac. Education,35%
+W,39.898073871,32.778396606,http://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png,#3F5BA9,1.1,Dept. Administration,55%
+W,39.900032826,32.779104710,http://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png,#3F5BA9,1.1,Basic English 2,25%
+W,39.900353826,32.781432867,http://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png,#3F5BA9,1.1,Basic English 1,50%
+W,39.898822890,32.782441378,http://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png,#3F5BA9,1.1,Dept. Econ.,45%
+W,39.897580008,32.781111002,http://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png,#3F5BA9,1.1,Dept. Arch.,60%
+W,39.896279485,32.781325579,http://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png,#3F5BA9,1.1,Dept. Hum. Sci.,40%
+W,39.896180710,32.779764533,http://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png,#3F5BA9,1.1,Dept. Biology,35%
+W,39.894674375,32.781507969,http://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png,#3F5BA9,1.1,Dept. Physics,80%
+W,39.893246207,32.781765461,http://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png,#3F5BA9,1.1,Dept. Stat.,40%
+W,39.892307799,32.781556249,http://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png,#3F5BA9,1.1,Dept. Ind. Eng.,60%
+W,39.893542544,32.784243822,http://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png,#FF8277,1.1,Cafeteria,95%
+W,39.890472102,32.783997059,http://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png,#3F5BA9,1.1,Dept. Civil Eng.,90%
+W,39.891340566,32.781904936,http://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png,#3F5BA9,1.1,Dept. EE Eng.1,75%
+W,39.888780419,32.782355547,http://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png,#3F5BA9,1.1,Dept. Mech Eng.,65%
+W,39.889578931,32.779850364,http://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png,#3F5BA9,1.1,Dept. EE Eng. 2,35%
+W,39.887928387,32.783229947,http://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png,#3F5BA9,1.1,Dept. Chem. Eng.,65%
+W,39.886611217,32.783423066,http://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png,#3F5BA9,1.1,Dept. Env. Eng.,55%
+W,39.885878529,32.780992985,http://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png,#3F5BA9,1.1,Dept. Mining. Eng.,50%
+W,39.885182881,32.778836489,http://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png,#3F5BA9,1.1,Dept. Aeros. Eng.,45%
+W,39.899399053,32.773761749,http://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png,#009D57,1.1,Technopolis 1,40%
+W,39.898427804,32.775864601,http://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png,#009D57,1.1,Technopolis 2,55%
+W,39.898230260,32.770972252,http://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png,#009D57,1.1,Technopolis 3,35%
+W,39.896814513,32.774190903,http://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png,#009D57,1.1,Technopolis 4,65%
+W,39.893489039,32.771852016,http://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png,#009D57,1.1,Technopolis 5,25%
+W,39.892386000,32.777667046,http://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png,#FF8277,1.1,Informatics Ins.,40%
