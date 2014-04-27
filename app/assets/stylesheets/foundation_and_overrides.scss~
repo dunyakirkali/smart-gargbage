@@ -55,7 +55,7 @@
 // $default-float: left;
 
 // We use these as default colors throughout
-// $primary-color: #008CBA;
+$primary-color: #008CBA;
 // $secondary-color: #e7e7e7;
 $alert-color: #f04124;
 $success-color: #43AC6A;
@@ -778,8 +778,8 @@ $success-color: #43AC6A;
 // $panel-border-color: scale-color($panel-bg, $lightness: $panel-function-factor);
 
 // We use these to set default inner padding and bottom margin
-// $panel-margin-bottom: rem-calc(20);
-// $panel-padding: rem-calc(20);
+$panel-margin-bottom: rem-calc(2);
+$panel-padding: rem-calc(2);
 
 // We use these to set default font colors
 // $panel-font-color: #333;
