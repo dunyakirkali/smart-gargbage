@@ -27,6 +27,7 @@ function ($scope, $rootScope) {
 
   $scope.init = function() {
     $scope.state = 'playing';
+    $rootScope.$broadcast('init_time');
   }
 
   $scope.reset = function() {
@@ -34,6 +35,7 @@ function ($scope, $rootScope) {
     $scope.state = 'paused';
     $scope.speed_up = 1.0;
     $scope.time = 0;
+    $rootScope.$broadcast('reset_time');
   }
 
   $scope.reset();

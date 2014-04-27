@@ -22,6 +22,14 @@ map_overlay.prototype.onAdd = function() {
   this.addTruck();
 }
 
+map_overlay.prototype.reset = function() {
+  this.time = 0;
+  this.speed = 50;
+  this.nT = 0.0;
+  this.completed = false;
+  this.setTime(0.0);
+}
+
 map_overlay.prototype.onRemove = function() {}
 
 map_overlay.prototype.draw = function() {
@@ -126,7 +134,7 @@ function map_overlay(map, element) {
   this.time = 0;
   this.speed = 50;
   this.element = element;
-  this.nT = null;
+  this.nT = 0.0;
 }
 
 sgApp.factory('map_overlay', function ($rootScope) {

@@ -1,7 +1,7 @@
 .row ng-controller="TimeController"
   .columns.small-4
     h3 Zaman hızlandırıcı
-    div ui-slider=true min="1.0" max="100.0" step='0.1' use-decimals=true ng-model="speed_up"
+    div ui-slider=true min="1.0" max="1000.0" step='0.1' use-decimals=true ng-model="speed_up"
     .row
       .columns.small-6
         p
@@ -14,8 +14,8 @@
           br
           | {{ speed }}km/h
   .columns.small-2
-    button.button ng-show="state == 'paused'" ng-click='play()' Play
-    button.alert.button ng-show="state == 'playing'" ng-click='pause()' Pause
+    button.button ng-show="state == 'paused'" ng-click='play()' Oynat
+    button.alert.button ng-show="state == 'playing'" ng-click='pause()' Durdur
   .columns.small-6
     p
       | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi semper dui in neque congue ullamcorper. Nulla accumsan justo a augue gravida, tempor commodo quam molestie. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vivamus eu ullamcorper diam. In sagittis lorem ornare, fringilla dui quis, lobortis mauris. Cras volutpat massa in ipsum hendrerit consectetur.
@@ -26,7 +26,7 @@
     .row
       .columns.small-12
         p 
-          | Cost: 
+          | Masraf: 
           span.label ng-class='alert_state'
             | {{ cost | currency:'' }}₺
           | Geçen zaman:
@@ -40,7 +40,7 @@
     .row
       .columns.small-12
         p
-          | Cost: 
+          | Masraf: 
           span.label ng-class='alert_state'
             | {{ cost | currency:'' }}₺
           | Geçen zaman:

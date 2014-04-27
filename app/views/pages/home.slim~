@@ -1,7 +1,7 @@
 .row ng-controller="TimeController"
   .columns.small-4
     h3 Zaman hızlandırıcı
-    div ui-slider=true min="1.0" max="100.0" step='0.1' use-decimals=true ng-model="speed_up"
+    div ui-slider=true min="1.0" max="1000.0" step='0.1' use-decimals=true ng-model="speed_up"
     .row
       .columns.small-6
         p
@@ -26,10 +26,10 @@
     .row
       .columns.small-12
         p 
-          | Cost: 
+          | Masraf: 
           span.label ng-class='alert_state'
             | {{ cost | currency:'' }}₺
-          | Time: 
+          | Geçen zaman:
           span.label
             | {{ time | number:0 }}s
     .row
@@ -40,10 +40,10 @@
     .row
       .columns.small-12
         p
-          | Cost: 
+          | Masraf: 
           span.label ng-class='alert_state'
             | {{ cost | currency:'' }}₺
-          | Time: 
+          | Geçen zaman:
           span.label
             | {{ time | number:0 }}s
     .row
