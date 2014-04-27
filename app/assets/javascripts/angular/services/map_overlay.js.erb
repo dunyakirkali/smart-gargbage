@@ -94,16 +94,15 @@ map_overlay.prototype.setTime = function(time) {
   this.time = time;
   var that = this;
 
-  this.pathNode = d3.selectAll('path').node();
+  this.pathNode = this.svg.selectAll('path').node();
   this.pathLength = this.pathNode.getTotalLength();
   var p = this.pathNode.getPointAtLength(this.pathLength);
 
   this.truck.transition()
       .duration(30).attr({
       transform: function () {
-        var nT = that.timel
+        var nT = that.time / 100.0;
         var p = that.pathNode.getPointAtLength(that.pathLength * nT);
-        that.gmap.panTo(that.getProjection().fromContainerPixelToLatLng(p));
         return "translate(" + [p.x, p.y] + ")";
       }
     });
