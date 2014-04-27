@@ -5,20 +5,17 @@ map_overlay.prototype.onAdd = function() {
   this.div = d3.select(this.getPanes().overlayLayer).append("div").attr("class", "d3map");
   this.svg = this.div.append('svg:svg');
 
-  $.ajax("<%= asset_path 'metu-campus-pick-up-sites.kml'%>").done(function(xml) {
-    var kml_as_json = toGeoJSON.kml(xml);
-    that.containers_data = kml_as_json.features;
-    that.addContainers();
-    if(that.path_element) that.addTruck();
-    that.draw();
-  });
-
   $.ajax(path_kml).done(function(xml) {
     var kml_as_json = toGeoJSON.kml(xml);
     that.path_data = kml_as_json.features;
     that.addPath();
-    if(that.containers) that.addTruck();
-    that.draw();
+    $.ajax("<%= asset_path 'metu-campus-pick-up-sites.kml'%>").done(function(xml) {
+      var kml_as_json = toGeoJSON.kml(xml);
+      that.containers_data = kml_as_json.features;
+      that.addContainers();
+      that.addTruck();
+      that.draw();
+    });
   });
 }
 
