@@ -40,6 +40,6 @@
         .map_canvas
 .row
   .columns.small-6
-    = render 'readme'
+    = render 'readme_col_one'
   .columns.small-6
-    = render 'readme'
+    = render 'readme_col_two'

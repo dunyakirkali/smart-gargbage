@@ -6,7 +6,7 @@ function ($scope, $rootScope, $element, map_overlay) {
   $scope.cost = 0;
   $scope.complete = false;
   $scope.alert_state = '';
-  $scope.price_limit = 10;
+  $scope.price_limit = 37;
   $scope.cost_per_second = 0.134;
 
   $scope.init = function() {
@@ -31,6 +31,14 @@ function ($scope, $rootScope, $element, map_overlay) {
 
     google.maps.event.addListener($scope.map, 'bounds_changed', $scope.redraw);
 
+    google.maps.Map.prototype.getMapScale = function () {
+      var circumference = 40075040, zoom, lat, scale;
+      zoom = this.getZoom();
+      lat = this.getCenter().lat();
+      scale = (circumference * Math.cos(lat) / Math.pow(2, zoom + 8));
+      return scale;
+    }
+
     $rootScope.$on('tick', function (event, data) {
       if(!$scope.complete) {
         $scope.time = data;
@@ -38,9 +46,16 @@ function ($scope, $rootScope, $element, map_overlay) {
         if($scope.cost > $scope.price_limit) {
           $scope.alert_state = 'alert';
         }
+  	if (this.time > 37) {
+          this.complete = true;
+        }
         $scope.$apply();
         $scope.overlay.setTime(data);
       }
+    });
+
+    $rootScope.$on('speed', function (event, data) {
+      $scope.overlay.setSpeed(data);
     });
   }
 

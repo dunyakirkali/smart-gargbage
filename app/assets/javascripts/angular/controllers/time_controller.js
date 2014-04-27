@@ -17,7 +17,7 @@ function ($scope, $rootScope) {
   $scope.start_timer = function() {
     $scope.start_time =  new Date();
     $scope.time = 0;
-    $scope.timer = setInterval($scope.tick, 1000);
+    $scope.timer = setInterval($scope.tick, 30);
   }
   $scope.stop_timer = function() {
     clearInterval($scope.timer);
@@ -27,5 +27,6 @@ function ($scope, $rootScope) {
     $scope.time = parseInt((new Date() - $scope.start_time) * $scope.speed_up / 1000.0);
     $scope.$apply();
     $rootScope.$broadcast('tick', $scope.time);
+    $rootScope.$broadcast('speed', $scope.speed * $scope.speed_up);
   }
 }]);

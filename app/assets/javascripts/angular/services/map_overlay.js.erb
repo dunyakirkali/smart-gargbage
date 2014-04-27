@@ -3,7 +3,6 @@ map_overlay.prototype.onAdd = function() {
   var that = this;
   this.div = d3.select(this.getPanes().overlayLayer).append("div").attr("class", "d3map");
   this.svg = this.div.append('svg:svg');
-  this.addTruck();
 
   $.ajax("<%= asset_path 'metu-campus-pick-up-sites.kml'%>").done(function(xml) {
     var kml_as_json = toGeoJSON.kml(xml);
@@ -19,6 +18,8 @@ map_overlay.prototype.onAdd = function() {
       that.draw();
     });
   });
+
+  this.addTruck();
 }
 map_overlay.prototype.onRemove = function() {}
 map_overlay.prototype.draw = function() {
@@ -91,26 +92,31 @@ map_overlay.prototype.addContainers = function() {
 }
 
 map_overlay.prototype.setTime = function(time) {
-  this.time = time;
-  var that = this;
-
   this.pathNode = this.svg.selectAll('path').node();
   this.pathLength = this.pathNode.getTotalLength();
   var p = this.pathNode.getPointAtLength(this.pathLength);
-
+  this.time += (this.speed * 0.000277777778 * 30.0 / this.gmap.getMapScale() / this.pathLength);
+  if (this.time < -1.0) {
+    this.completed = true;
+  }
+  var that = this;
   this.truck.transition()
-      .duration(30).attr({
+      .duration(30).ease("linear").attr({
       transform: function () {
-        var nT = that.time / 100.0;
-        var p = that.pathNode.getPointAtLength(that.pathLength * nT);
+        var p = that.pathNode.getPointAtLength(that.pathLength * that.time * -1);
         return "translate(" + [p.x, p.y] + ")";
       }
     });
 }
 
+map_overlay.prototype.setSpeed = function(speed) {
+  this.speed = parseFloat(speed);
+}
+
 function map_overlay(map, element) {
   this.gmap = map;
   this.time = 0;
+  this.speed = 50;
   this.element = element;
 }
 
