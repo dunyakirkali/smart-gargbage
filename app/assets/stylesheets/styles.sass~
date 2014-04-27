@@ -26,10 +26,12 @@ body
     .truck
       fill: $success-color
       opacity: 1.0
-    .container
+    .containers
       fill: $alert-color
+      stroke-width: 1
+      stroke: $alert-color
     .path
       stroke-width: 5
-      stroke: $secondary-color
+      stroke: $primary-color
       fill: transparent
       
