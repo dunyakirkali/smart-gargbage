@@ -27,7 +27,7 @@ map_overlay.prototype.reset = function() {
   this.speed = 50;
   this.nT = 0.0;
   this.completed = false;
-  this.setTime(0.0);
+  this.setTime(0);
 }
 
 map_overlay.prototype.onRemove = function() {}
@@ -55,12 +55,6 @@ map_overlay.prototype.draw = function() {
 
   // Update all circles
   var that = this;
-  this.truck.attr({
-    transform: function () {
-      return "translate(" + [10, 10] + ")";
-    }
-  });
-
   if(!this.containers) return;
   this.containers.selectAll(".container").attr({
     transform: function (d) {

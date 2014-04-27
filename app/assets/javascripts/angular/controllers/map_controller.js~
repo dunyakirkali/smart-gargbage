@@ -6,6 +6,8 @@ function ($scope, $rootScope, $element, map_overlay) {
     $scope.path;
     $scope.containers;
     $scope.price_limit = 50;
+    $scope.cost = 0;
+    $scope.time = 0;
     $scope.cost_per_second = 0.134;
     $scope.center = new google.maps.LatLng(39.896180710,32.779764533)
     $scope.map = new google.maps.Map($element.find(".map_canvas")[0], $scope.map_options());
