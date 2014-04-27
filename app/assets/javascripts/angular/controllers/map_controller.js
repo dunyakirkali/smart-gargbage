@@ -3,8 +3,6 @@ sgApp.controller('MapController', ['$scope', '$rootScope', '$element', 'map_over
 function ($scope, $rootScope, $element, map_overlay) {
 
   $scope.init = function() {
-    $scope.path;
-    $scope.containers;
     $scope.price_limit = 50;
     $scope.cost = 0;
     $scope.time = 0;
@@ -17,6 +15,8 @@ function ($scope, $rootScope, $element, map_overlay) {
 //    google.maps.event.addListener($scope.map, 'zoom_changed', $scope.redraw);
 //    google.maps.event.addListener($scope.map, 'tilt_changed', $scope.redraw);
     google.maps.event.addListener($scope.map, 'center_changed', $scope.redraw);
+
+    google.maps.event.addListener($scope.map, 'click', $scope.foo);
 
     google.maps.Map.prototype.getMapScale = function () {
       var circumference = 40075040, zoom, lat, scale;
@@ -59,6 +59,11 @@ function ($scope, $rootScope, $element, map_overlay) {
       $scope.time = 0;
       $scope.overlay.reset();
     });
+  }
+
+  $scope.foo = function(event) {
+    var container = $scope.overlay.containers_data[0].geometry.coordinates;
+    var distance = google.maps.geometry.spherical.computeDistanceBetween(event.latLng, new google.maps.LatLng(container[1], container[0]));
   }
 
   $scope.redraw = function() {
