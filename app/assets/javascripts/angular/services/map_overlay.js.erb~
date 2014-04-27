@@ -4,7 +4,17 @@ map_overlay.prototype.onAdd = function() {
   this.div = d3.select(this.getPanes().overlayLayer).append("div").attr("class", "d3map");
   this.svg = this.div.append('svg:svg');
   this.addTruck();
-  this.addPath();
+
+  var path_kml = this.element.data('kml');
+
+  console.log(path_kml);
+
+//  $.ajax("<%= asset_path " + this.element.data('kml') +"%>").done(function(xml) {
+//    var kml_as_json = toGeoJSON.kml(xml);
+//   that.path_data = kml_as_json.features;
+//    that.addPath();
+//    that.draw();
+//  });
 
   $.ajax("<%= asset_path 'metu-campus-pick-up-sites.kml'%>").done(function(xml) {
     var kml_as_json = toGeoJSON.kml(xml);
@@ -45,8 +55,7 @@ map_overlay.prototype.draw = function() {
 }
 
 map_overlay.prototype.addPath = function() {
-  console.log('addPath');
-  console.log(thisa.element.data('kml'));
+  console.log(this.path_path);
 }
 
 map_overlay.prototype.addTruck = function() {
