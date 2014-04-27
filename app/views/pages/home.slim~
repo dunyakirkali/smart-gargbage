@@ -41,3 +41,5 @@
 .row
   .columns.small-6
     = render 'readme'
+  .columns.small-6
+    = render 'readme'
