@@ -9,6 +9,7 @@ map_overlay.prototype.onAdd = function() {
     var kml_as_json = toGeoJSON.kml(xml);
     that.containers_data = kml_as_json.features;
     that.addContainers();
+    if(that	.path_element) that..addTruck();
     that.draw();
   });
 
@@ -16,10 +17,9 @@ map_overlay.prototype.onAdd = function() {
     var kml_as_json = toGeoJSON.kml(xml);
     that.path_data = kml_as_json.features;
     that.addPath();
+    if(that.containers) that.addTruck();
     that.draw();
   });
-
-  this.addTruck();
 }
 
 map_overlay.prototype.reset = function() {
@@ -53,9 +53,11 @@ map_overlay.prototype.draw = function() {
   var path = d3.geo.path().projection(googleMapProjection);
   this.svg.selectAll('path').attr('d', path);
 
-  // Update all circles
   var that = this;
-  if(!this.containers) return;
+  this.pathNode = this.svg.selectAll('path').node();
+  if(!this.containers || !this.truck || !this.pathNode) return;
+
+  this.pathLength = this.pathNode.getTotalLength();
   this.containers.selectAll(".container").attr({
     transform: function (d) {
       var latLon = new google.maps.LatLng(d.geometry.coordinates[1], d.geometry.coordinates[0]);
@@ -63,11 +65,19 @@ map_overlay.prototype.draw = function() {
       return "translate(" + [rr.x, rr.y] + ")";
     }
   });
+  this.truck.transition()
+      .duration(30).ease("linear").attr({
+      transform: function () {
+        that.nT = that.pathLength * that.time * -1;
+        var p = that.pathNode.getPointAtLength(that.nT);
+        return "translate(" + [p.x, p.y] + ")";
+      }
+    }).attr('opacity', '1.0');
 }
 
 map_overlay.prototype.addPath = function() {
   var overlay_projection = this.getProjection();
-  var path_element = this.svg.append("svg:g").attr("class", "path");
+  this.path_element = this.svg.append("svg:g").attr("class", "path");
   var googleMapProjection = function(coordinates) {
       var googleCoordinates = new google.maps.LatLng(coordinates[1], coordinates[0]);
       var pixelCoordinates = overlay_projection.fromLatLngToDivPixel(googleCoordinates);
@@ -75,7 +85,7 @@ map_overlay.prototype.addPath = function() {
   }
   var path = d3.geo.path().projection(googleMapProjection);
 
-  path_element.selectAll("path").data(this.path_data).enter().append("svg:path").attr("d", path).attr('class', 'path').attr('z-index', 0);
+  this.path_element.selectAll("path").data(this.path_data).enter().append("svg:path").attr("d", path).attr('class', 'path').attr('z-index', 0);
 }
 
 map_overlay.prototype.addContainers = function() {
@@ -84,7 +94,7 @@ map_overlay.prototype.addContainers = function() {
         .data(this.containers_data)
         .enter().append("svg:circle")
 	.attr({ r: 10 })
-        .attr('opacity', function(d) { 
+        .attr('class', 'container').attr('opacity', function(d) { 
           var myRegexp = /(\d+)/;
           var match = myRegexp.exec(d.properties.description);
           if(match[1] == 100) {
@@ -92,12 +102,11 @@ map_overlay.prototype.addContainers = function() {
           } else {
             return parseFloat(match[1]) / 100.0 * 0.6;
           }
-         })
-        .attr('class', 'container').attr('z-index', 1);
+         }).attr('z-index', 1);
 }
 
 map_overlay.prototype.addTruck = function() {
-  this.truck = this.svg.append("svg:g").append("circle").attr('class', 'truck').attr({ r: 10 }).attr('z-index', 2);
+  this.truck = this.svg.append("svg:g").append("circle").attr('class', 'truck').attr({ r: 10 }).attr('z-index', 2).attr('opacity', 1.0);
 }
 
 map_overlay.prototype.setTime = function(time) {
@@ -108,15 +117,7 @@ map_overlay.prototype.setTime = function(time) {
   if (this.time < -1.0) {
     this.completed = true;
   }
-  var that = this;
-  this.truck.transition()
-      .duration(30).ease("linear").attr({
-      transform: function () {
-        that.nT = that.pathLength * that.time * -1;
-        var p = that.pathNode.getPointAtLength(that.nT);
-        return "translate(" + [p.x, p.y] + ")";
-      }
-    });
+  this.draw();
 }
 
 map_overlay.prototype.setSpeed = function(speed) {

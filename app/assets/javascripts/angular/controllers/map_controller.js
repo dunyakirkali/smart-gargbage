@@ -14,6 +14,10 @@ function ($scope, $rootScope, $element, map_overlay) {
     $scope.overlay = new map_overlay($scope.map, $element);
     $scope.overlay.setMap($scope.map);
     google.maps.event.addListener($scope.map, 'bounds_changed', $scope.redraw);
+//    google.maps.event.addListener($scope.map, 'zoom_changed', $scope.redraw);
+//    google.maps.event.addListener($scope.map, 'tilt_changed', $scope.redraw);
+    google.maps.event.addListener($scope.map, 'center_changed', $scope.redraw);
+
     google.maps.Map.prototype.getMapScale = function () {
       var circumference = 40075040, zoom, lat, scale;
       zoom = this.getZoom();
