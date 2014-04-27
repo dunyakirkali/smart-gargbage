@@ -35,12 +35,11 @@ function ($scope, $rootScope, $element, map_overlay) {
       if(!$scope.complete) {
         $scope.time = data;
         $scope.cost = $scope.time * $scope.cost_per_second;
+        if($scope.cost > $scope.price_limit) {
+          $scope.alert_state = 'alert';
+        }
         $scope.$apply();
         $scope.overlay.setTime(data);
-      }
-
-      if($scope.cost > $scope.price_limit) {
-        $scope.alert_state = 'alert';
       }
     });
   }
