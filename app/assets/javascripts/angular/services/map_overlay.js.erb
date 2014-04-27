@@ -110,7 +110,8 @@ map_overlay.prototype.setTime = function(time) {
   this.truck.transition()
       .duration(30).ease("linear").attr({
       transform: function () {
-        var p = that.pathNode.getPointAtLength(that.pathLength * that.time * -1);
+        that.nT = that.pathLength * that.time * -1;
+        var p = that.pathNode.getPointAtLength(that.nT);
         return "translate(" + [p.x, p.y] + ")";
       }
     });
@@ -125,6 +126,7 @@ function map_overlay(map, element) {
   this.time = 0;
   this.speed = 50;
   this.element = element;
+  this.nT = 0.0;
 }
 
 sgApp.factory('map_overlay', function ($rootScope) {
