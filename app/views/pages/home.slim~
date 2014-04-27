@@ -17,7 +17,7 @@
     h3 Fixed route
     .row
       .columns.small-12
-        p
+        p 
           | Cost: 
           span.label
             | {{ cost | currency:'' }}₺
@@ -31,10 +31,13 @@
     h3 Improved route
     .row
       .columns.small-12
-        p.label
-          | Cost: {{ cost | currency:'' }}₺
-        p.label
-          | Time: {{ time }}s.
+        p
+          | Cost: 
+          span.label
+            | {{ cost | currency:'' }}₺
+          | Time: 
+          span.label
+            | {{ time }}s.
     .row
       .columns.small-12
         .map_canvas

@@ -18,7 +18,7 @@ function ($scope, $rootScope, $element, map_overlay) {
       disableDefaultUI: true
     }
     $scope.map = new google.maps.Map($element.find(".map_canvas")[0], $scope.map_options);
-    $scope.overlay = new map_overlay($scope.map);
+    $scope.overlay = new map_overlay($scope.map, $element);
     $scope.overlay.setMap($scope.map);
 
     google.maps.event.addListener($scope.map, 'bounds_changed', $scope.redraw);

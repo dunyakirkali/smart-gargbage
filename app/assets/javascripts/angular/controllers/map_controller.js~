@@ -9,15 +9,18 @@ function ($scope, $rootScope, $element, map_overlay) {
   $scope.init = function() {
     $scope.complete = (Math.random() > 0.5);
 
+    console.log($element.data('kml'));
+
     $scope.center = new google.maps.LatLng(39.89139, 32.78472)
     $scope.map_options = {
       zoom: 11,
       center: $scope.center,
       mapTypeId: google.maps.MapTypeId.ROADMAP,
-      styles: $scope.map_style()
+      styles: $scope.map_style(),
+      disableDefaultUI: true
     }
     $scope.map = new google.maps.Map($element.find(".map_canvas")[0], $scope.map_options);
-    $scope.overlay = new map_overlay($scope.map);
+    $scope.overlay = new map_overlay($scope.map, $element);
     $scope.overlay.setMap($scope.map);
 
     google.maps.event.addListener($scope.map, 'bounds_changed', $scope.redraw);
