@@ -10,7 +10,7 @@ body
   height: 400px
 
 .top-bar
-  margin-top: 30px
+  margin-bottom: 30px
 
 .d3map
   width: 100%
@@ -30,6 +30,6 @@ body
       fill: $alert-color
     .path
       stroke-width: 5
-      stroke: red
+      stroke: $secondary-color
       fill: transparent
       

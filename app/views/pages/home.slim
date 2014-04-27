@@ -17,7 +17,7 @@
       .columns.small-12
         p 
           | Cost: 
-          span.label
+          span.label ng-class='alert_state'
             | {{ cost | currency:'' }}₺
           | Time: 
           span.label
@@ -31,7 +31,7 @@
       .columns.small-12
         p
           | Cost: 
-          span.label
+          span.label ng-class='alert_state'
             | {{ cost | currency:'' }}₺
           | Time: 
           span.label

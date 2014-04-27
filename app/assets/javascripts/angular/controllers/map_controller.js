@@ -5,9 +5,12 @@ function ($scope, $rootScope, $element, map_overlay) {
   $scope.containers;
   $scope.cost = 0;
   $scope.complete = false;
+  $scope.alert_state = '';
+  $scope.price_limit = 10;
+  $scope.cost_per_second = 0.134;
 
   $scope.init = function() {
-    $scope.complete = (Math.random() > 0.5);
+    $scope.complete = false;
 
     $scope.center = new google.maps.LatLng(39.89139, 32.78472)
     $scope.map_options = {
@@ -31,12 +34,14 @@ function ($scope, $rootScope, $element, map_overlay) {
     $rootScope.$on('tick', function (event, data) {
       if(!$scope.complete) {
         $scope.time = data;
-        $scope.cost = $scope.time * 0.134;
+        $scope.cost = $scope.time * $scope.cost_per_second;
+        if($scope.cost > $scope.price_limit) {
+          $scope.alert_state = 'alert';
+        }
         $scope.$apply();
         $scope.overlay.setTime(data);
       }
     });
-
   }
 
   $scope.redraw = function() {
