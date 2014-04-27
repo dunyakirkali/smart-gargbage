@@ -68,9 +68,8 @@ map_overlay.prototype.addPath = function() {
       var pixelCoordinates = overlay_projection.fromLatLngToDivPixel(googleCoordinates);
       return [pixelCoordinates.x, pixelCoordinates.y];
   }
-
   var path = d3.geo.path().projection(googleMapProjection);
-  
+
   path_element.selectAll("path").data(this.path_data).enter().append("svg:path").attr("d", path).attr('class', 'path');
 }
 
@@ -93,7 +92,22 @@ map_overlay.prototype.addContainers = function() {
 
 map_overlay.prototype.setTime = function(time) {
   this.time = time;
-  console.log('time');
+  var that = this;
+
+  this.pathNode = d3.selectAll('path').node();
+  console.log(this.pathNode);
+  this.pathLength = this.pathNode.getTotalLength();
+  console.log(this.pathLength);
+  var p = this.pathNode.getPointAtLength(this.pathLength);
+
+  this.truck.transition()
+      .duration(30).attr({
+      transform: function () {
+        var nT = (that.time / 100); 
+        var p = that.pathNode.getPointAtLength(that.pathLength * nT);
+        return "translate(" + [p.x, p.y] + ")";
+      }
+    });
 }
 
 function map_overlay(map, element) {
