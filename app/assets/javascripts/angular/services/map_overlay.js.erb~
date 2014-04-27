@@ -62,7 +62,7 @@ map_overlay.prototype.draw = function() {
 
 map_overlay.prototype.addPath = function() {
   var overlay_projection = this.getProjection();
-  var path_element = this.svg.append("svg:g").attr("id", "path");
+  var path_element = this.svg.append("svg:g").attr("class", "path");
   var googleMapProjection = function(coordinates) {
       var googleCoordinates = new google.maps.LatLng(coordinates[1], coordinates[0]);
       var pixelCoordinates = overlay_projection.fromLatLngToDivPixel(googleCoordinates);
@@ -103,8 +103,9 @@ map_overlay.prototype.setTime = function(time) {
   this.truck.transition()
       .duration(30).attr({
       transform: function () {
-        var nT = (that.time / 100); 
+        var nT = that.timel
         var p = that.pathNode.getPointAtLength(that.pathLength * nT);
+        that.gmap.panTo(that.getProjection().fromContainerPixelToLatLng(p));
         return "translate(" + [p.x, p.y] + ")";
       }
     });

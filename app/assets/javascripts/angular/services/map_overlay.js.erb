@@ -62,7 +62,7 @@ map_overlay.prototype.draw = function() {
 
 map_overlay.prototype.addPath = function() {
   var overlay_projection = this.getProjection();
-  var path_element = this.svg.append("svg:g").attr("id", "path");
+  var path_element = this.svg.append("svg:g").attr("class", "path");
   var googleMapProjection = function(coordinates) {
       var googleCoordinates = new google.maps.LatLng(coordinates[1], coordinates[0]);
       var pixelCoordinates = overlay_projection.fromLatLngToDivPixel(googleCoordinates);
@@ -95,9 +95,7 @@ map_overlay.prototype.setTime = function(time) {
   var that = this;
 
   this.pathNode = d3.selectAll('path').node();
-  console.log(this.pathNode);
   this.pathLength = this.pathNode.getTotalLength();
-  console.log(this.pathLength);
   var p = this.pathNode.getPointAtLength(this.pathLength);
 
   this.truck.transition()
@@ -105,7 +103,7 @@ map_overlay.prototype.setTime = function(time) {
       transform: function () {
         var nT = that.timel
         var p = that.pathNode.getPointAtLength(that.pathLength * nT);
-        
+        that.gmap.panTo(that.getProjection().fromContainerPixelToLatLng(p));
         return "translate(" + [p.x, p.y] + ")";
       }
     });
