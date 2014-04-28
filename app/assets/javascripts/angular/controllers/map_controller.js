@@ -3,10 +3,10 @@ sgApp.controller('MapController', ['$scope', '$rootScope', '$element', 'map_over
 function ($scope, $rootScope, $element, map_overlay) {
 
   $scope.init = function() {
-    $scope.price_limit = 50;
+    $scope.price_limit = 15;
     $scope.cost = 0;
     $scope.time = 0;
-    $scope.cost_per_second = 0.134;
+    $scope.cost_per_second = 0.05;
     $scope.center = new google.maps.LatLng(39.896180710,32.779764533)
     $scope.map = new google.maps.Map($element.find(".map_canvas")[0], $scope.map_options());
     $scope.overlay = new map_overlay($scope.map, $element);
@@ -86,7 +86,7 @@ function ($scope, $rootScope, $element, map_overlay) {
   }
 
   $scope.map_style = function() {
-    return [{"featureType":"administrative","stylers":[{"visibility":"off"}]},{"featureType":"poi","stylers":[{"visibility":"simplified"}]},{"featureType":"road","elementType":"labels","stylers":[{"visibility":"simplified"}]},{"featureType":"water","stylers":[{"visibility":"simplified"}]},{"featureType":"transit","stylers":[{"visibility":"simplified"}]},{"featureType":"landscape","stylers":[{"visibility":"simplified"}]},{"featureType":"road.highway","stylers":[{"visibility":"off"}]},{"featureType":"road.local","stylers":[{"visibility":"on"}]},{"featureType":"road.highway","elementType":"geometry","stylers":[{"visibility":"on"}]},{"featureType":"water","stylers":[{"color":"#84afa3"},{"lightness":52}]},{"stylers":[{"saturation":-17},{"gamma":0.36}]},{"featureType":"transit.line","elementType":"geometry","stylers":[{"color":"#3f518c"}]}];
+    return [];
   }
 
   $scope.init();

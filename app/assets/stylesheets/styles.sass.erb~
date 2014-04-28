@@ -2,18 +2,32 @@
 html, 
 body
   height: 100%
-[class^="icon-"], [class*=" icon-"]
-  display: inline-block
-  width: 100%
+#slider.ui-slider
+  background: $light-grey
+  border: 0
+  .ui-slider-handle
+    border:0
+    border-radius: 50%
+    width: 50px
+    height: 50px
+    background: url(https://trello-attachments.s3.amazonaws.com/532202b3db0af38f6e53bde3/535e301d3ffb07b957ec0342/300x203/a6a6e1777fa32e157a71af0547177be3/smart_truck.gif) no-repeat center center
+    -webkit-background-size: contain
+    -moz-background-size: contain
+    -o-background-size: contain
+    background-size: contain
 .curtains
   width: 100%
   position: relative
   height: 10px
   background: url(<%= image_path('green_mark.png') %>) left -5px  repeat-x
+.digit
+  background-color: $grey
+  padding: 10px
+  color: $antrisit
 #header
   text-align: center
   text-transform: uppercase
-  color: $darker-green !important
+  color: $darker-green
 .icon
   line-height: 138px
   text-align: center
@@ -52,6 +66,7 @@ body
   background-color: $dark-green
   text-align: center
   margin-bottom: 0
+  color: white
 .d3map
   width: 100%
   height: 100%
@@ -71,6 +86,6 @@ body
       stroke: $alert-color
     .path
       stroke-width: 2
-      stroke: $primary-color
+      stroke: $blue
       fill: transparent
       

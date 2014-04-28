@@ -2,9 +2,18 @@
   h2 Manage your simulation
   .columns.small-3
     p
-      | {{ time | number:0 }}s
+      span.digit
+        | {{ time | number:0 }}
+      span.digit
+        | {{ time | number:0 }}
+      | :
+      span.digit
+        | {{ time | number:0 }}
+      span.digit
+        | {{ time | number:0 }}
+
   .columns.small-3
     button.radius ng-show="state == 'paused'" ng-click='play()' Oynat
     button.alert.radius ng-show="state == 'playing'" ng-click='pause()' Durdur
   .columns.small-6
-    div ui-slider=true min="1.0" max="50.0" step='0.1' use-decimals=true ng-model="speed_up"
+    #slider ui-slider=true min="1.0" max="50.0" step='0.1' use-decimals=true ng-model="speed_up"

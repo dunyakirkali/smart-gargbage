@@ -1,6 +1,6 @@
 $light-blue: #eff8f8
 $dark-blue: #e4f0ed
-$blue: #8cd9f0
+$blue: #1bbeee
 
 $darker-green: #567a71
 $dark-green: #33b575
@@ -9,3 +9,6 @@ $light-green: #79b942
 $red: #ef6b81
 
 $antrisit: #858585
+
+$light-grey: #d3d2d2
+$dark-grey: #a7a7a6
