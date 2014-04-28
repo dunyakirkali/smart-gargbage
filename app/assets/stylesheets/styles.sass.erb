@@ -2,6 +2,11 @@
 html, 
 body
   height: 100%
+.top-bar-section ul.right li > a
+  font-style: italic
+.top-bar-section li:not(.has-form) a:not(.button):hover
+  background: $dark-green
+  cursor: default
 #slider.ui-slider
   background: $light-grey
   border: 0
@@ -32,8 +37,10 @@ body
   line-height: 138px
   text-align: center
 .red
+  text-transform: uppercase
   color: $red
 .light-green
+  text-transform: uppercase
   color: $dark-green
 .reverse
   -ms-transform: rotate(180deg)
