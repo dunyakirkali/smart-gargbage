@@ -2,6 +2,9 @@
 html, 
 body
   height: 100%
+[class^="icon-"], [class*=" icon-"]
+  display: inline-block
+  width: 100%
 .curtains
   width: 100%
   position: relative
