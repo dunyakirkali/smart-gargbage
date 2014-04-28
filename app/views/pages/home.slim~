@@ -1,8 +1,8 @@
-.row ng-controller="TimeController"
+.row#home ng-controller="TimeController"
   = render 'navigation'
   .columns.small-8.large-4
     h3 Zaman hızlandırıcı
-    div ui-slider=true min="1.0" max="30.0" step='0.1' use-decimals=true ng-model="speed_up"
+    div ui-slider=true min="1.0" max="50.0" step='0.1' use-decimals=true ng-model="speed_up"
     .row
       .columns.small-6
         p

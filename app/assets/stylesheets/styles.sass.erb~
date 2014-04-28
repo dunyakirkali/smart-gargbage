@@ -3,14 +3,16 @@ html,
 body
   height: 100%
 .curtains
-  width:100%;
-  position:relative;
-  height:10px;
-  background:url(http://www.jcuga.com/wp-content/plugins/customize/css/circle.png) left -5px  repeat-x;
+  width: 100%
+  position: relative
+  height: 10px
+  background: url(<%= image_path('green_mark.png') %>) left -5px  repeat-x
 #header
   text-align: center
   text-transform: uppercase
   color: $darker-green !important
+#home
+  @include clearfix()
 .red
   color: $red
 .light-green

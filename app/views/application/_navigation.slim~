@@ -2,8 +2,12 @@ nav.top-bar data-topbar=true
   ul.title-area
     li.name
       h1
-        a href="#" Smart Garbage Process Management Demonstration
+        a href="#"
+          span
+            i class="fa fa-github strong"
+          | Smart Garbage Process Management Demonstration
   section class="top-bar-section"
     ul class="right"
-      li.has-form
+      li
         a href="#" Picking up trash smart
+.curtains

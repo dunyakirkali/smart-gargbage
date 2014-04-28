@@ -3,4 +3,4 @@
     = render 'header'
     = render 'howto'
     = render 'controls'
-    
+    = render 'maps'
