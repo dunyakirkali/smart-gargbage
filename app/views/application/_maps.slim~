@@ -1,23 +1,31 @@
 .row
   #left-column.columns.small-6 ng-controller='MapController' data-kml="#{asset_path 'normal.kml'}"
     h2.red Today
-    p 
-      | Masraf: 
-      span.label ng-class='alert_state'
-        | {{ cost | currency:'' }}₺
-      | Geçen zaman:
-      span.label
-        | {{ time | number:0 }}s
+    .row
+      .columns.small-6
+        p
+          | Zaman
+          br
+          | {{ time | number:0 }}s
+      .columns.small-6
+        p 
+          | Masraf: 
+          br
+          | {{ cost | currency:'' }}₺
     .map_canvas
     = render 'pros'
   #right-column.columns.small-6 ng-controller='MapController' data-kml="#{asset_path 'improved.kml'}"
     h2.light-green Tomorrow
-    p 
-      | Masraf: 
-      span.label ng-class='alert_state'
-        | {{ cost | currency:'' }}₺
-      | Geçen zaman:
-      span.label
-        | {{ time | number:0 }}s
+    .row
+      .columns.small-6
+        p
+          | Zaman
+          br
+          | {{ time | number:0 }}s
+      .columns.small-6
+        p 
+          | Masraf: 
+          br
+          | {{ cost | currency:'' }}₺
     .map_canvas
     = render 'cons'

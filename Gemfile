@@ -19,6 +19,7 @@ gem 'angularjs-rails'
 gem 'google-analytics-rails'
 gem 'jquery-ui-rails'
 gem 'newrelic_rpm'
+gem 'font-awesome-sass'
 
 group :development, :test do
   gem 'rspec-rails', '~> 3.0.0.beta'
