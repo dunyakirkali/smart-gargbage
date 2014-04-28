@@ -76,7 +76,7 @@ map_overlay.prototype.draw = function() {
     transform: function (d, b) {
       var latLon = new google.maps.LatLng(d.geometry.coordinates[1], d.geometry.coordinates[0]);
       var distance = google.maps.geometry.spherical.computeDistanceBetween(that.last_known_truck_coordinates, latLon);
-      if(distance < 40) {
+      if(distance < 45) {
         that.empty_container(b);
       }
       var rr = overlayProjection.fromLatLngToContainerPixel(latLon);
