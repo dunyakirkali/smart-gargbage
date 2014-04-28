@@ -11,10 +11,17 @@ body
   text-align: center
   text-transform: uppercase
   color: $darker-green !important
+.icon
+  line-height: 100%
+  text-align: center
 .red
   color: $red
 .light-green
-  color: $light-green
+  color: $dark-green
+.reverse
+  -ms-transform: rotate(180deg)
+  -webkit-transform: rotate(180deg)
+  transform: rotate(180deg)
 #howto
   background-color: #fff
   margin-bottom: 20px
@@ -26,12 +33,16 @@ body
   h2
     background-color: $dark-blue
     margin: 0
-#left-column
-  background-color: #fff
-#right-column
-  background-color: #fff
 #maps
   margin-bottom: 20px
+  #left-column
+    background-color: #fff
+    i
+      color: $red
+  #right-column
+    background-color: #fff
+    i
+      color: $dark-green
   .map_canvas
     height: 400px
 #footer
