@@ -12,3 +12,4 @@ html ng-app="sgApp"
   body
     = render 'navigation'
     = yield
+    = render 'footer'
