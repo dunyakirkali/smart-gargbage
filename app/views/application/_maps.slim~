@@ -6,16 +6,7 @@
         p
           | Zaman
           br
-          p
-            span.digit
-              | {{ time | number:0 }}
-            span.digit
-              | {{ time | number:0 }}
-            | :
-            span.digit
-              | {{ time | number:0 }}
-            span.digit
-              | {{ time | number:0 }}
+          = render 'clock'
       .columns.small-6
         p 
           | Masraf
@@ -32,11 +23,13 @@
         p
           | Zaman
           br
-          | {{ time | number:0 }}s
+          render 'clock'
       .columns.small-6
         p 
-          | Masraf: 
+          | Masraf
           br
-          | {{ cost | currency:'' }}₺
+          p
+            span.digit
+              | {{ cost | currency:'' }}₺
     .map_canvas
     = render 'pros'

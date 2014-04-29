@@ -1,17 +1,7 @@
 .row#controls
   h2 Manage your simulation
   .columns.small-3
-    p
-      span.digit
-        | {{ time | number:0 }}
-      span.digit
-        | {{ time | number:0 }}
-      | :
-      span.digit
-        | {{ time | number:0 }}
-      span.digit
-        | {{ time | number:0 }}
-
+    = render 'clock'
   .columns.small-3
     button.radius ng-show="state == 'paused'" ng-click='play()' Oynat
     button.alert.radius ng-show="state == 'playing'" ng-click='pause()' Durdur
