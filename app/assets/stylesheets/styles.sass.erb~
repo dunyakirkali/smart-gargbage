@@ -6,7 +6,7 @@ body
   font-style: italic
 .top-bar-section li:not(.has-form) a:not(.button):hover
   background: $dark-green
-  cursor: none
+  cursor: default
 #slider.ui-slider
   background: $light-grey
   border: 0
@@ -36,6 +36,7 @@ body
 .icon
   line-height: 138px
   text-align: center
+  color: white
 .red
   text-transform: uppercase
   color: $red
@@ -62,11 +63,21 @@ body
   #left-column
     background-color: #fff
     i
-      color: $red
+      width: 70px
+      height: 70px
+      line-height: 70px
+      border-radius: 50%
+      color: white
+      background-color: $red
   #right-column
     background-color: #fff
     i
-      color: $dark-green
+      line-height: 70px
+      width: 70px
+      height: 70px
+      border-radius: 50%
+      color: white
+      background-color: $dark-green
   .map_canvas
     height: 400px
 #footer
