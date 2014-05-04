@@ -8,10 +8,13 @@ body
   background: $dark-green
   cursor: default
 #slider.ui-slider
+  height: 10px
   background: $light-grey
   border: 0
   .ui-slider-handle
-    border: 0
+    margin-top: -14px
+    border: 2px solid
+    border-color: #d5d4d2
     border-radius: 50%
     width: 50px
     height: 50px
@@ -24,7 +27,7 @@ body
   width: 100%
   position: relative
   height: 10px
-  background: url(<%= image_path('green_mark.png') %>) left -5px  repeat-x
+  background: url(<%= image_path('green_mark.png') %>) repeat-x
 .digit
   background-color: $grey
   padding: 10px
@@ -32,6 +35,7 @@ body
 #header
   text-align: center
   text-transform: uppercase
+  margin-top: 20px
 .header-background
   background-color: $dark-green
   position: absolute
@@ -39,7 +43,7 @@ body
   top: 0
   left: 0
   right: 0
-  height: 45px
+  height: 60px
   width: 100%
 .icon
   line-height: 138px
@@ -59,13 +63,26 @@ body
   background-color: #fff
   margin-bottom: 20px
   text-align: center
+  height: 140px
 #controls
   background-color: #fff
   text-align: center
   margin-bottom: 20px
+  height: 180px
   h2
     background-color: $dark-blue
     margin: 0
+    height: 50px
+  #clock-row
+    margin-top: 51px
+  #button-row
+    margin-top: 46px
+    button
+      padding: 0 32px 0 32px
+      line-height: 37px
+      height: 37px
+  #slider-row
+    margin-top: 60px
 .pros-cons
   height: 200px
 #maps
@@ -90,23 +107,13 @@ body
       background-color: $dark-green
   .map_canvas
     height: 400px
-#clock-row
-  margin-top: 33px
-#button-row
-  margin-top: 27px
-  button
-    padding: 0 32px 0 32px
-    line-height: 37px
-    height: 37px
-#slider-row
-  margin-top: 40px
 #footer
   background-color: $dark-green
   text-align: center
   margin-bottom: 0
   color: white
-  height: 45px
-  line-height: 45px
+  height: 50px
+  line-height: 50px
 .d3map
   width: 100%
   height: 100%

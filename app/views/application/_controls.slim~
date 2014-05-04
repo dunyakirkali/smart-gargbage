@@ -3,7 +3,11 @@
   .columns.small-3#clock-row
     = render 'clock'
   .columns.small-3#button-row
-    button.radius ng-show="state == 'paused'" ng-click='play()' Oynat
-    button.alert.radius ng-show="state == 'playing'" ng-click='pause()' Durdur
-  .columns.small-6
+    button.radius ng-show="state == 'paused'" ng-click='play()'
+      | Oynat
+      i class="fa fa-angle-right fa-1x"
+    button.alert.radius ng-show="state == 'playing'" ng-click='pause()'
+      | Durdur
+      i class="fa fa- fa-1x"
+  .columns.small-6#slider-row
     #slider ui-slider=true min="1.0" max="50.0" step='0.1' use-decimals=true ng-model="speed_up"
