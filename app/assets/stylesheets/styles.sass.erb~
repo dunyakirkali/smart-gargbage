@@ -27,7 +27,7 @@ body
   width: 100%
   position: relative
   height: 10px
-  background: url(<%= image_path('green_mark.png') %>) repeat-x
+  background: url(<%= image_path('green_mark.png') %>) left -5px repeat-x
 .digit
   background-color: $grey
   padding: 10px
@@ -81,7 +81,6 @@ body
     background-clip: content-box
     background-color: #fff
   text-align: center
-  margin-bottom: 30px
   height: 180px
   h2
     background-clip: content-box

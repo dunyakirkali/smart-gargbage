@@ -3,16 +3,16 @@
     i class="fa fa-clock-o fa-3x strong"
   .columns.small-8
     h4 Yavaş
-    p Çöp kamyonu her seferinde rutin güzergahını izlediğinden dolu olmayan olan çöp konteynerlerini de ziyaret etmektedir.
+    p Çöp kamyonu her seferinde rutin güzergahını izlediğinden dolu olmayan çöp konteynerlerini de ziyaret etmektedir.
 .row.pros-cons
   .columns.small-4.icon
     i class="fa fa-flask fa-3x strong"
   .columns.small-8
     h4 Çevreye Zararlı
-    p Rutin güzergahı izleyen kamyon gerekenden çok daha fazla yakıt tüketmekte ve çevre kirliliğine neden olmaktadır.
+    p Rutin güzergahını izleyen kamyon gerekenden çok daha fazla yakıt tüketmekte ve çevre kirliliğine neden olmaktadır.
 .row.pros-cons
   .columns.small-4.icon
     i class="fa fa-credit-card fa-3x strong"
   .columns.small-8
     h4 Verimsiz
-    p Bu calisma bicimi hem yakit tuketimi hem de is gucu acisindan maddi kaynaklarin verimsiz kullanimina yol acmaktadir.
+    p Bu çalışma biçimi hem yakıt tüketimi hem de is gucu acisindan maddi kaynaklarin verimsiz kullanimina yol acmaktadir.
