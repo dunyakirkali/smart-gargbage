@@ -31,11 +31,21 @@ body
 .digit
   background-color: $grey
   padding: 10px
+  margin-left: 5px
+  margin-right: 5px
   color: $antrisit
+.money
+  background-color: $grey
+  padding: 10px
+  width: 150px
+  color: $antrisit
+  display: inline-block
+  margin: 0
 #header
   text-align: center
   text-transform: uppercase
   margin-top: 30px
+  margin-bottom: 30px
 .header-background
   background-color: $dark-green
   position: absolute
@@ -60,16 +70,20 @@ body
   -webkit-transform: rotate(180deg)
   transform: rotate(180deg)
 #howto
-  background-color: #fff
+  div
+    background-clip: content-box
+    background-color: #fff
   margin-bottom: 30px
   text-align: center
   height: 140px
 #controls
+  background-clip: content-box
   background-color: #fff
   text-align: center
   margin-bottom: 30px
   height: 180px
   h2
+    background-clip: content-box
     background-color: $dark-blue
     margin: 0
     height: 50px
@@ -82,13 +96,17 @@ body
       padding: 0 32px 0 32px
       line-height: 37px
       height: 37px
+      i
+        float: right
+        margin-top: 12px
   #slider-row
     margin-top: 60px
-.pros-cons
-  height: 200px
 #maps
+  .pros-cons
+    height: 125px
   margin-bottom: 20px
   #left-column
+    background-clip: content-box
     background-color: #fff
     i
       width: 70px
@@ -98,6 +116,7 @@ body
       color: white
       background-color: $red
   #right-column
+    background-clip: content-box
     background-color: #fff
     i
       line-height: 70px

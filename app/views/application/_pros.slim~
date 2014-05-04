@@ -1,24 +1,18 @@
-.row
+.row.pros-cons
   .columns.small-4.icon
     i class="fa fa-tachometer fa-3x strong"
   .columns.small-8
     h4 Hızlı
     p Konteynerlerin doluluk oranını bildiğimizde güzergahı ona göre düzenler, zamandan tasarruf ederiz.
-.row
+.row.pros-cons
   .columns.small-4.icon
     i class="fa fa-pagelines fa-3x strong"
   .columns.small-8
     h4 Çevre Dostu
     p İhtiyaca göre düzenlenen güzergah, kaynakların gereksiz kullanımını ortadan kaldıracağı için doğa dostu bir uygulamadır.
-.row
+.row.pros-cons
   .columns.small-4.icon
     i class="fa fa-money fa-3x strong"
   .columns.small-8
-    h4 Tasarruf
-    p Minimum yakıt tüketimi maddi kaynakların verimli kullanımını sağlayacaktır.
-.row
-  .columns.small-4.icon
-    i class="fa fa-smile-o fa-3x strong"
-  .columns.small-8
-    h4 Etkin İş gücü
-    p Personelin sarfettiği zaman ve enerjiden tasarruf etmesi sağlanacak böylece işin verimliliği artacaktır.
+    h4 Etkin
+    p Doluluk oranina gore duzenlenen güzergahlar yakit ve is gucunden tasarruf edilmesini saglayacaktir.

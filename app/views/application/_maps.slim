@@ -12,7 +12,7 @@
           | Masraf
           br
           p
-            span.digit
+            span.money
               | {{ cost | currency:'' }}₺
     .map_canvas
     = render 'cons'
@@ -29,7 +29,7 @@
           | Masraf
           br
           p
-            span.digit
+            span.money
               | {{ cost | currency:'' }}₺
     .map_canvas
     = render 'pros'

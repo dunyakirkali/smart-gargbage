@@ -11,13 +11,13 @@
         p 
           | Masraf
           br
-          p
-            span.digit
+          p.money
+            span
               | {{ cost | currency:'' }}₺
     .map_canvas
     = render 'cons'
   #right-column.columns.small-12.large-6 ng-controller='MapController' data-kml="#{asset_path 'improved.kml'}"
-    h2.light-green Tomorrow
+    h2.light-green Yarın
     .row
       .columns.small-6
         p
@@ -29,7 +29,7 @@
           | Masraf
           br
           p
-            span.digit
+            span.money
               | {{ cost | currency:'' }}₺
     .map_canvas
     = render 'pros'
