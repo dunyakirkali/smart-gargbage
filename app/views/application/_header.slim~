@@ -1,4 +1,4 @@
 .row#header
   .columns.small-12
-    i class="fa fa-github fa-5x strong"
-    h1 Eco Trash
+    = image_tag 'truck.svg'
+    h1 Eko Çöp

@@ -2,6 +2,14 @@
 html, 
 body
   height: 100%
+
+.title
+  font-weight: bold
+  letter-spacing: 1px
+  font-size: 24px
+  text-transform: uppercase
+  line-height: 50px
+
 .top-bar-section ul.right li > a
   font-style: italic
 .top-bar-section li:not(.has-form) a:not(.button):hover
@@ -18,7 +26,7 @@ body
     border-radius: 50%
     width: 50px
     height: 50px
-    background: url(https://trello-attachments.s3.amazonaws.com/532202b3db0af38f6e53bde3/535e301d3ffb07b957ec0342/300x203/a6a6e1777fa32e157a71af0547177be3/smart_truck.gif) no-repeat center center
+    background: url(<%= image_path('truck.svg') %>) no-repeat center center
     -webkit-background-size: contain
     -moz-background-size: contain
     -o-background-size: contain
@@ -27,7 +35,7 @@ body
   width: 100%
   position: relative
   height: 10px
-  background: url(<%= image_path('green_mark.png') %>) left -5px repeat-x
+  background: url(<%= image_path('green_mark.png') %>) left -10px repeat-x
 .digit
   background-color: $grey
   padding: 10px
@@ -46,6 +54,9 @@ body
   text-transform: uppercase
   margin-top: 30px
   margin-bottom: 30px
+  #logo
+    width: 100px
+    height: 100px
 .header-background
   background-color: $dark-green
   position: absolute
@@ -73,10 +84,17 @@ body
   div
     background-clip: content-box
     background-color: #fff
+  h2
+    margin-top: 20px
+  p
+    padding-left: 40px
+    padding-right: 40px
+    margin-bottom: 30px
   margin-bottom: 20px
   text-align: center
   height: 140px
 #controls
+  margin-top: 30px
   div
     background-clip: content-box
     background-color: #fff
