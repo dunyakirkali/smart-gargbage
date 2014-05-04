@@ -11,8 +11,8 @@
         p 
           | Masraf
           br
-          p.money
-            span
+          p
+            span.money
               | {{ cost | currency:'' }}₺
     .map_canvas
     = render 'cons'

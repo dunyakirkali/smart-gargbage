@@ -1,14 +1,14 @@
 .row#controls
   .columns.small-12
-    h2 Kontroller
-    .columns.small-3#clock-row
+    h2.title Kontroller
+    .columns.small-2#clock-row
       = render 'clock'
-    .columns.small-3#button-row
+    .columns.small-4#button-row
       button.radius ng-show="state == 'paused'" ng-click='play()'
         | Oynat
-        i class="fa fa-play fa-1x"
+        = image_tag 'white_play.svg'
       button.alert.radius ng-show="state == 'playing'" ng-click='pause()'
         | Durdur
-        i class="fa fa-stop fa-1x"
+        = image_tag 'white_cross.svg'
     .columns.small-6#slider-row
       #slider ui-slider=true min="1.0" max="50.0" step='0.1' use-decimals=true ng-model="speed_up"
