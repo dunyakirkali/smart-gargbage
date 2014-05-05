@@ -1,9 +1,9 @@
 .row#controls
   .columns.small-12
     h2.title Kontroller
-    .columns.small-2#clock-row
+    .columns.small-3#clock-row
       = render 'clock'
-    .columns.small-4#button-row
+    .columns.small-3#button-row
       button.radius ng-show="state == 'paused'" ng-click='play()'
         | Oynat
         = image_tag 'white_play.svg'
