@@ -3,4 +3,4 @@
     #howto-container
       h2.title — Nasıl çalışıyor —
       p 
-        | Simülasyonu sol taraftaki 'Oynat' düğmesi ile başlatabilirsiniz. Simülasyonu hızlandırıp yavaşlatmak için sliderı kullanabilirsiniz. Bu simülasyonda çöp kamyonun hizi saatte elli kilometre olarak sabitlenmiştir.
+        | Simülasyonu 'Oynat' düğmesi ile başlatabilirsiniz. Simülasyonu hızlandırıp yavaşlatmak için sliderı kullanabilirsiniz. Bu simülasyonda çöp kamyonun hizi saatte elli kilometre olarak sabitlenmiştir.
