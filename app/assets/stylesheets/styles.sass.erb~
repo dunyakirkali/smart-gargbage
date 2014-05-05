@@ -30,13 +30,13 @@ span.not-bold
 #header
   text-align: center
   text-transform: uppercase
-  margin-bottom: 30px
-  margin-top: 30px
+  margin-bottom: 20px
+  margin-top: 20px
   #logo
     width: 100px
     height: 100px
 #howto
-  margin-bottom: 30px
+  margin-bottom: 20px
   text-align: center
   div
     background-clip: content-box
@@ -47,9 +47,8 @@ span.not-bold
   #howto-container
     padding: 20px
 #controls
-  margin-bottom: 30px
+  margin-bottom: 20px
   text-align: center
-  height: 180px
   div
     background-clip: content-box
     background-color: #fff
@@ -60,13 +59,17 @@ span.not-bold
     background-color: $dark-blue
     margin: 0
     height: 50px
+  #slider-row
+    height: 50px
+    margin-top: 13px
+    margin-bottom: 20px
   #clock-row
-    margin-top: 38px
-    margin-bottom: 15px
+    margin-top: 25px
+    padding-bottom: 15px
     p
       font-weight: bold
   #button-row
-    margin-top: 30px
+    margin-top: 20px
     button
       text-transform: uppercase
       font-weight: bold
@@ -78,15 +81,12 @@ span.not-bold
       img
         float: right
         margin-top: 12px
-    margin-top: 42px
 #maps
-  margin-bottom: 30px
-  .pros-cons
-    height: 125px
   p
     letter-spacing: 1px
     font-weight: bold
   #left-column
+    margin-bottom: 20px
     background-clip: content-box
     background-color: #fff
     i
@@ -96,7 +96,9 @@ span.not-bold
       border-radius: 50%
       color: white
       background-color: $red
+      margin-top: 46px
   #right-column
+    margin-bottom: 20px
     background-clip: content-box
     background-color: #fff
     i
@@ -106,6 +108,7 @@ span.not-bold
       border-radius: 50%
       color: white
       background-color: $dark-green
+      margin-top: 46px
   .map_canvas
     height: 400px
 
@@ -114,6 +117,9 @@ span.not-bold
   height: 10px
   background: $light-grey
   border: 0
+  margin-top: 22px
+  padding-left: 25px
+  padding-right: 25px
   .ui-slider-handle
     margin-top: -14px
     border: 2px solid
@@ -154,7 +160,6 @@ span.not-bold
   height: 60px
   width: 100%
 .icon
-  line-height: 138px
   text-align: center
   color: white
 .red

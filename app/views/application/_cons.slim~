@@ -1,16 +1,17 @@
-.row.pros-cons data-equalizer=true
+.row.pros-cons  data-equalizer=true
   .columns.small-4.icon data-equalizer-watch=true
-    i class="fa fa-clock-o fa-3x strong"
+    span
+      i class="fa fa-clock-o fa-3x strong"
   .columns.small-8 data-equalizer-watch=true
     h4 Yavaş
     p Çöp kamyonu her seferinde rutin güzergahını izlediğinden dolu olmayan çöp konteynerlerini de ziyaret etmektedir.
-.row.pros-cons data-equalizer=true
+.row.pros-cons  data-equalizer=true
   .columns.small-4.icon data-equalizer-watch=true
     i class="fa fa-flask fa-3x strong"
   .columns.small-8 data-equalizer-watch=true
     h4 Çevreye Zararlı
     p Rutin güzergahını izleyen kamyon gerekenden çok daha fazla yakıt tüketmekte ve çevre kirliliğine neden olmaktadır.
-.row.pros-cons data-equalizer=true
+.row.pros-cons  data-equalizer=true
   .columns.small-4.icon data-equalizer-watch=true
     i class="fa fa-credit-card fa-3x strong"
   .columns.small-8 data-equalizer-watch=true

@@ -1,5 +1,5 @@
-.row#maps
-  #left-column.columns.small-12.large-6 ng-controller='MapController' data-kml="#{asset_path 'normal.kml'}"
+.row#maps data-equalizer=true
+  #left-column.columns.small-12.large-6 ng-controller='MapController' data-kml="#{asset_path 'normal.kml'}" data-equalizer-watch=true
     .row
       .columns.small-12
         h2.red.title Bugün
@@ -20,7 +20,7 @@
     .row
       .columns.small-12
         = render 'cons'
-  #right-column.columns.small-12.large-6 ng-controller='MapController' data-kml="#{asset_path 'improved.kml'}"
+  #right-column.columns.small-12.large-6 ng-controller='MapController' data-kml="#{asset_path 'improved.kml'}" data-equalizer-watch=true
     .row
       .columns.small-12
         h2.light-green.title Yarın
