@@ -2,7 +2,8 @@
 html, 
 body
   height: 100%
-
+span.not-bold
+  font-weight: normal
 .title
   font-weight: bold
   letter-spacing: 1px
@@ -25,6 +26,27 @@ body
 .top-bar-section li:not(.has-form) a:not(.button):hover
   background: $dark-green
   cursor: default
+
+#header
+  text-align: center
+  text-transform: uppercase
+  margin-bottom: 30px
+  #logo
+    width: 100px
+    height: 100px
+#howto
+  margin-bottom: 30px
+  text-align: center
+  div
+    background-clip: content-box
+    background-color: #fff
+  p
+    padding-left: 40px
+    padding-right: 40px
+  #howto-container
+    padding: 20px
+
+
 #slider.ui-slider
   height: 10px
   background: $light-grey
@@ -59,14 +81,6 @@ body
   color: $antrisit
   display: inline-block
   margin: 0
-#header
-  text-align: center
-  text-transform: uppercase
-  margin-top: 30px
-  margin-bottom: 30px
-  #logo
-    width: 100px
-    height: 100px
 .header-background
   background-color: $dark-green
   position: absolute
@@ -90,19 +104,6 @@ body
   -ms-transform: rotate(180deg)
   -webkit-transform: rotate(180deg)
   transform: rotate(180deg)
-#howto
-  div
-    background-clip: content-box
-    background-color: #fff
-  h2
-    margin-top: 20px
-  p
-    padding-left: 40px
-    padding-right: 40px
-    margin-bottom: 30px
-  margin-bottom: 20px
-  text-align: center
-  height: 140px
 #controls
   margin-top: 50px
   div
