@@ -19,7 +19,7 @@ body
         font-weight: bold
         img
           margin-bottom: 3px
-          margin-bottom: 10px
+          margin-right: 10px
 .top-bar-section ul.right li > a
   font-style: italic
 .top-bar-section li:not(.has-form) a:not(.button):hover
