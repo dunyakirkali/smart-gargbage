@@ -10,7 +10,7 @@
   .columns.small-8 data-equalizer-watch=true
     h4 Çevre Dostu
     p İhtiyaca göre düzenlenen güzergah, kaynakların gereksiz kullanımını ortadan kaldıracağı için doğa dostu bir uygulamadır.
-.row.pros-cons  data-equalizer=true
+.row.pros-cons data-equalizer=true
   .columns.small-4.icon data-equalizer-watch=true
     = image_tag 'efficient.svg', :class => 'icon-image'
   .columns.small-8 data-equalizer-watch=true
