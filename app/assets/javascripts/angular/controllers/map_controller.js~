@@ -4,6 +4,10 @@ function ($scope, $rootScope, $element, map_overlay) {
 
   $scope.init = function() {
     $scope.price_limit = 15;
+    $scope.digit_1 = 0;
+    $scope.digit_2 = 0;
+    $scope.digit_3 = 0;
+    $scope.digit_4 = 0;
     $scope.cost = 0;
     $scope.time = 0;
     $scope.cost_per_second = 0.05;

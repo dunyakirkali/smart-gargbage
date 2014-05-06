@@ -82,7 +82,7 @@ function ($scope, $rootScope, $element, map_overlay) {
     return {
       zoom: 14,
       center: $scope.center,
-      mapTypeId: google.maps.MapTypeId.ROADMAP,
+      mapTypeId: google.maps.MapTypeId.SATELLITE,
       styles: $scope.map_style(),
       mapTypeControl: true,
       disableDefaultUI: true,

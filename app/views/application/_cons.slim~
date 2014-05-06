@@ -3,7 +3,7 @@
     = image_tag 'slow_icon-02.svg', :class => 'icon-image'
   .columns.small-8 data-equalizer-watch=true
     h4 Yavaş
-    p Çöp kamyonu her seferinde rutin güzergahını izlediğinden dolu olmayan çöp konteynerlerini de ziyaret etmektedir.
+    p Çöp kamyonu her seferinde rutin güzergahını izlediği için dolu olmayan çöp konteynerlerini de ziyaret etmektedir.
 .row.pros-cons data-equalizer=true
   .columns.small-4.icon data-equalizer-watch=true
     = image_tag 'bad_icon.svg', :class => 'icon-image'
@@ -15,4 +15,4 @@
     = image_tag 'inefficient.svg', :class => 'icon-image'
   .columns.small-8 data-equalizer-watch=true
     h4 Verimsiz
-    p Bu çalışma biçimi hem yakıt tüketimi hem de iş gücü açısından maddi kaynakların verimsiz kullanımına yol açmaktadır.
+    p Bu çalışma biçimi hem yakıt tüketimi hem de iş gücü açısından kaynakların verimsiz kullanımına yol açmaktadır.

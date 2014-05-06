@@ -3,7 +3,7 @@
     = image_tag 'fast_icon-01.svg', :class => 'icon-image'
   .columns.small-8 data-equalizer-watch=true
     h4 Hızlı
-    p Konteynerlerin doluluk oranını bildiğimizde güzergahı ona göre düzenlediğimizden, zamandan da tasarruf ederiz.
+    p Konteynerlerin doluluk oranını bildiğimizde güzergahı ona göre düzenler, zamandan da tasarruf ederiz.
 .row.pros-cons data-equalizer=true
   .columns.small-4.icon data-equalizer-watch=true
     = image_tag 'good_icon.svg', :class => 'icon-image'
@@ -15,4 +15,4 @@
     = image_tag 'efficient.svg', :class => 'icon-image'
   .columns.small-8 data-equalizer-watch=true
     h4 Etkin
-    p Doluluk orançna göre düzenlenen güzergahlar kullanılan yakıt ve iş gücünden tasarruf edilmesini sağlayacaktır.
+    p Doluluk oranına göre düzenlenen güzergahlar kullanılan yakıt ve iş gücünden tasarruf edilmesini sağlayacaktır.
