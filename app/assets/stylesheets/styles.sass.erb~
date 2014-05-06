@@ -84,8 +84,10 @@ span.not-bold
   .map-container
     padding: 20px
   p
-    letter-spacing: 1px
-    font-weight: bold
+    letter-spacing: 0px
+    font-weight: normal
+    font-size: 15px
+    padding-right: 60px
   #left-column
     margin-bottom: 20px
     background-clip: content-box
@@ -93,7 +95,7 @@ span.not-bold
     img.icon-image
       width: 70px
       height: 70px
-      line-height: 70px
+      line-height: 2em
       border-radius: 50%
       color: white
       background-color: $red
@@ -105,7 +107,7 @@ span.not-bold
     background-clip: content-box
     background-color: #fff
     img.icon-image
-      line-height: 70px
+      line-height: 2em
       width: 70px
       height: 70px
       border-radius: 50%
