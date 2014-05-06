@@ -4,6 +4,10 @@ function ($scope, $rootScope, $element, map_overlay) {
 
   $scope.init = function() {
     $scope.price_limit = 15;
+    $scope.digit_1 = 0;
+    $scope.digit_2 = 0;
+    $scope.digit_3 = 0;
+    $scope.digit_4 = 0;
     $scope.cost = 0;
     $scope.time = 0;
     $scope.cost_per_second = 0.05;
@@ -27,16 +31,20 @@ function ($scope, $rootScope, $element, map_overlay) {
     }
 
     // Angularjs events
-    var that = this;
     $rootScope.$on('tick', function (event, data) {
       if(!$scope.complete) {
         $scope.time = data;
+        $scope.digit_1 = Math.floor($scope.time / 600) % 10;
+        $scope.digit_2 = Math.floor($scope.time / 60) % 10;
+        $scope.digit_3 = Math.floor($scope.time / 10) % 6;
+        $scope.digit_4 = parseInt($scope.time) % 10;
         $scope.cost = $scope.time * $scope.cost_per_second;
         if($scope.cost > $scope.price_limit) {
           $scope.alert_state = 'alert';
         }
   	if ($scope.overlay.completed) {
-          that.complete = true;
+          $scope.complete = true;
+          console.log('ctrl complete');
         }
         $scope.$apply();
         $scope.overlay.setTime(data);
@@ -48,7 +56,7 @@ function ($scope, $rootScope, $element, map_overlay) {
     });
 
     $rootScope.$on('init_time', function (event) {
-      console.log(that, 'init');
+//      console.log(that, 'init');
       $scope.complete = false;
     });
 

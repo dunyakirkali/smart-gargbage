@@ -142,6 +142,7 @@ map_overlay.prototype.setTime = function(time) {
   var p = this.pathNode.getPointAtLength(this.pathLength);
   this.time += (this.speed * 0.000277777778 * 30.0 / this.gmap.getMapScale() / this.pathLength);
   if (this.time < -1.0) {
+console.log('overlay complete');
     this.completed = true;
   }
   this.draw();

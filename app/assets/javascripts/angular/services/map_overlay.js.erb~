@@ -76,7 +76,7 @@ map_overlay.prototype.draw = function() {
     transform: function (d, b) {
       var latLon = new google.maps.LatLng(d.geometry.coordinates[1], d.geometry.coordinates[0]);
       var distance = google.maps.geometry.spherical.computeDistanceBetween(that.last_known_truck_coordinates, latLon);
-      if(distance < 45) {
+      if(distance < 50) {
         that.empty_container(b);
       }
       var rr = overlayProjection.fromLatLngToContainerPixel(latLon);
@@ -142,6 +142,7 @@ map_overlay.prototype.setTime = function(time) {
   var p = this.pathNode.getPointAtLength(this.pathLength);
   this.time += (this.speed * 0.000277777778 * 30.0 / this.gmap.getMapScale() / this.pathLength);
   if (this.time < -1.0) {
+console.log('overlay complete');
     this.completed = true;
   }
   this.draw();

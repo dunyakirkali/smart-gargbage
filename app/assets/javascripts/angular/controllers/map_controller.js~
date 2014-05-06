@@ -27,16 +27,20 @@ function ($scope, $rootScope, $element, map_overlay) {
     }
 
     // Angularjs events
-    var that = this;
     $rootScope.$on('tick', function (event, data) {
       if(!$scope.complete) {
         $scope.time = data;
+        $scope.digit_1 = Math.floor($scope.time / 600) % 10;
+        $scope.digit_2 = Math.floor($scope.time / 60) % 10;
+        $scope.digit_3 = Math.floor($scope.time / 10) % 6;
+        $scope.digit_4 = parseInt($scope.time) % 10;
         $scope.cost = $scope.time * $scope.cost_per_second;
         if($scope.cost > $scope.price_limit) {
           $scope.alert_state = 'alert';
         }
   	if ($scope.overlay.completed) {
-          that.complete = true;
+          $scope.complete = true;
+          console.log('ctrl complete');
         }
         $scope.$apply();
         $scope.overlay.setTime(data);
@@ -48,7 +52,7 @@ function ($scope, $rootScope, $element, map_overlay) {
     });
 
     $rootScope.$on('init_time', function (event) {
-      console.log(that, 'init');
+//      console.log(that, 'init');
       $scope.complete = false;
     });
 
@@ -86,7 +90,7 @@ function ($scope, $rootScope, $element, map_overlay) {
   }
 
   $scope.map_style = function() {
-    return [{"featureType":"administrative","stylers":[{"visibility":"off"}]},{"featureType":"poi","stylers":[{"visibility":"simplified"}]},{"featureType":"road","elementType":"labels","stylers":[{"visibility":"simplified"}]},{"featureType":"water","stylers":[{"visibility":"simplified"}]},{"featureType":"transit","stylers":[{"visibility":"simplified"}]},{"featureType":"landscape","stylers":[{"visibility":"simplified"}]},{"featureType":"road.highway","stylers":[{"visibility":"off"}]},{"featureType":"road.local","stylers":[{"visibility":"on"}]},{"featureType":"road.highway","elementType":"geometry","stylers":[{"visibility":"on"}]},{"featureType":"water","stylers":[{"color":"#84afa3"},{"lightness":52}]},{"stylers":[{"saturation":-17},{"gamma":0.36}]},{"featureType":"transit.line","elementType":"geometry","stylers":[{"color":"#3f518c"}]}];
+    return [];
   }
 
   $scope.init();

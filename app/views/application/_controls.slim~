@@ -1,9 +1,9 @@
-.row#controls
+.row#controls  ng-controller="TimeController"
   .columns.small-12
     h2.title Kontroller
-    .columns.small-6.medium-3.large-3#clock-row
+    .columns.small-12.medium-3.large-3#clock-row
       = render 'clock'
-    .columns.small-6.medium-3.large-3#button-row
+    .columns.small-12.medium-3.large-3#button-row
       button.radius ng-show="state == 'paused'" ng-click='play()'
         | Oynat
         = image_tag 'white_play.svg'

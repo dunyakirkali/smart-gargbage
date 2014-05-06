@@ -1,4 +1,4 @@
-.row#home ng-controller="TimeController"
+.row ng-controller="TimeController"
   = render 'navigation'
   .columns.small-8.large-4
     h3 Zaman hızlandırıcı
