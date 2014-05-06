@@ -81,6 +81,8 @@ span.not-bold
         float: right
         margin-top: 12px
 #maps
+  .map-container
+    padding: 20px
   p
     letter-spacing: 1px
     font-weight: bold
@@ -88,7 +90,7 @@ span.not-bold
     margin-bottom: 20px
     background-clip: content-box
     background-color: #fff
-    i
+    img.icon-image
       width: 70px
       height: 70px
       line-height: 70px
@@ -102,7 +104,7 @@ span.not-bold
     margin-bottom: 20px
     background-clip: content-box
     background-color: #fff
-    i
+    img.icon-image
       line-height: 70px
       width: 70px
       height: 70px
@@ -145,7 +147,6 @@ span.not-bold
   color: $antrisit
 .money
   background-color: $grey
-  width: 150px
   padding: 10px
   color: $antrisit
   display: inline-block
