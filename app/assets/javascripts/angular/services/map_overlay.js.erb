@@ -64,7 +64,7 @@ map_overlay.prototype.draw = function() {
 
   this.pathLength = this.pathNode.getTotalLength();
   this.truck.transition()
-      .duration(30).ease("linear").attr({
+      .duration(10).ease("linear").attr({
       transform: function () {
         that.nT = that.pathLength * that.time * -1;
         var p = that.pathNode.getPointAtLength(that.nT);
@@ -140,7 +140,7 @@ map_overlay.prototype.setTime = function(time) {
   this.pathNode = this.svg.selectAll('path').node();
   this.pathLength = this.pathNode.getTotalLength();
   var p = this.pathNode.getPointAtLength(this.pathLength);
-  this.time += (this.speed * 0.000277777778 * 30.0 / this.gmap.getMapScale() / this.pathLength);
+  this.time += (this.speed * 0.000277777778 * 10.0 / this.gmap.getMapScale() / this.pathLength);
   if (this.time < -1.0) {
 console.log('overlay complete');
     this.completed = true;
