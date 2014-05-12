@@ -1,5 +1,0 @@
-.row#header
-  .columns.small-12
-    div#header-container
-      = image_tag 'truck.svg', :id => 'logo'
-      h1 Eko Çöp

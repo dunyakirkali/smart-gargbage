@@ -1,6 +1,0 @@
-.row#howto
-  .columns.small-12
-    #howto-container
-      h2.title — Nasıl? —
-      p 
-        | Simülasyonu 'Oynat' düğmesi ile başlatabilirsiniz. Simülasyonu hızlandırıp yavaşlatmak için sliderı kullanabilirsiniz. Bu simülasyonda çöp kamyonun hizi saatte elli kilometre olarak sabitlenmiştir.
