@@ -44,7 +44,6 @@ function ($scope, $rootScope, $element, map_overlay) {
         }
   	if ($scope.overlay.completed) {
           $scope.complete = true;
-          console.log('ctrl complete');
         }
         $scope.$apply();
         $scope.overlay.setTime(data);
@@ -56,13 +55,10 @@ function ($scope, $rootScope, $element, map_overlay) {
     });
 
     $rootScope.$on('init_time', function (event) {
-//      console.log(that, 'init');
       $scope.complete = false;
     });
 
     $rootScope.$on('reset_time', function (event) {
-      console.log('reset_time');
-      $scope.cost = 0;
       $scope.alert_state = '';
       $scope.time = 0;
       $scope.overlay.reset();
