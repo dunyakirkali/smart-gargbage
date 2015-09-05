@@ -16,7 +16,6 @@ gem 'slim-rails'
 gem 'd3-rails'
 gem 'angularjs-rails'
 gem 'google-analytics-rails'
-gem 'jquery-ui-rails'
 gem 'font-awesome-sass'
 
 group :development do
