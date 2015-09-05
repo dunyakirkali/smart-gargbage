@@ -1,0 +1,6 @@
+#!/bin/bash
+set -x
+set -e
+
+git push git@heroku.com:smart-garbage.git master
+heroku run rake db:migrate --app smart-garbage
