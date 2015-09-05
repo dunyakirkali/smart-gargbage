@@ -1,6 +1,6 @@
 require "spec_helper"
 
-describe PagesController do
+RSpec.describe PagesController, type: :controller do
   describe "GET #home" do
     it "responds successfully with an HTTP 200 status code" do
       get :home

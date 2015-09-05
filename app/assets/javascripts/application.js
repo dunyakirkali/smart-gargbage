@@ -11,7 +11,7 @@
 // about supported directives.
 //
 //= require jquery
-//= require jquery.ui.all
+//= require jquery-ui
 //= require jquery_ujs
 //= require foundation
 //= require togeojson
@@ -23,6 +23,6 @@
 //= require angular/controllers/time_controller
 //= require angular/controllers/map_controller
 
-$(function(){ 
+$(function(){
   $(document).foundation();
 });
