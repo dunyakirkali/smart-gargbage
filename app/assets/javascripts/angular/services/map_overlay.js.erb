@@ -5,7 +5,7 @@ map_overlay.prototype.onAdd = function() {
   this.div = d3.select(this.getPanes().overlayLayer).append("div").attr("class", "d3map");
   this.svg = this.div.append('svg:svg');
   this.container_fullness_state = [];
-  for(i=0; i<48; i++) { 
+  for(i=0; i<48; i++) {
      this.container_fullness_state.push(1);
   }
 
@@ -29,7 +29,7 @@ map_overlay.prototype.reset = function() {
   this.nT = 0.0;
   this.completed = false;
   this.container_fullness_state = [];
-  for(i=0; i<48; i++) { 
+  for(i=0; i<48; i++) {
      this.container_fullness_state.push(1);
   }
   this.setTime(0);
@@ -54,7 +54,7 @@ map_overlay.prototype.draw = function() {
       var pixelCoordinates = overlayProjection.fromLatLngToContainerPixel(googleCoordinates);
       return [pixelCoordinates.x, pixelCoordinates.y];
   }
-  
+
   var path = d3.geo.path().projection(googleMapProjection);
   this.svg.selectAll('path').attr('d', path);
 
@@ -78,17 +78,17 @@ map_overlay.prototype.draw = function() {
       var distance = google.maps.geometry.spherical.computeDistanceBetween(that.last_known_truck_coordinates, latLon);
 	  var myRegexp = /(\d+)%/;
 	  var fullness = myRegexp.exec(d.properties.description);
-	  
+
 	  if(/improved/.test(that.path_kml)) {
 		  if(fullness && fullness[1] == 100 && distance < 100) {
 	        that.empty_container(b);
-		  }	  	
+		  }
 	  } else {
 		  if(distance < 50) {
 	        that.empty_container(b);
 		  }
 	  }
-	  
+
       var rr = overlayProjection.fromLatLngToContainerPixel(latLon);
       return "translate(" + [rr.x, rr.y] + ")";
     }
@@ -170,6 +170,6 @@ function map_overlay(map, element) {
   this.nT = 0.0;
 }
 
-sgApp.factory('map_overlay', function ($rootScope) {
+sgApp.factory('map_overlay', ['$rootScope', function ($rootScope) {
   return map_overlay;
-});
+}]);
